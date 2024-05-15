@@ -60,7 +60,19 @@ function Home() {
           distinctio eum, labore iure sed consequatur sunt repellendus quae fuga
           quibusdam similique.
         </div>
-        <div>ciao</div>
+        <div>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam
+          nesciunt in recusandae, amet hic, blanditiis sequi repellendus
+          similique esse commodi earum optio adipisci aspernatur voluptatum
+          autem totam odio placeat distinctio quis vel praesentium facere illum
+          velit inventore. Quo amet mollitia molestias labore obcaecati
+          inventore explicabo soluta iure, et assumenda itaque a illum placeat
+          rem repellendus sunt odit velit quos porro voluptatibus ipsa facilis!
+          Excepturi mollitia libero consequuntur harum magni odio! Beatae
+          dignissimos consequatur tenetur! Neque sequi sit iste non cupiditate
+          asperiores vel provident ex qui nisi, dicta obcaecati voluptatum ad ea
+          quaerat architecto eius magnam iure nulla repellendus cumque nihil?
+        </div>
         <div>ciao</div>
       </ContainerMenu>
     </>

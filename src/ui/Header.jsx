@@ -36,7 +36,7 @@ const StyledHeader = styled.header`
       props.open &&
       css`
         /* transition: all 0.5s cubic-bezier(0.1, 0.5, 0.5, 1.5); */
-        transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+        transition: all 0.7s cubic-bezier(0.68, -0.55, 0.27, 1.55);
         height: 100dvh;
         clip-path: none;
         @media only screen and (min-width: 768px) {
