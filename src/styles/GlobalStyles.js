@@ -20,7 +20,8 @@ const GlobalStyles = createGlobalStyle`
 
   --color-gold: #a18343;
   --color-gold-light: #F1e5ac;
-  --color-gold-lighter: #FFF8DC
+  --color-gold-lighter: #FFF8DC;
+
 
 }
 
@@ -34,6 +35,7 @@ const GlobalStyles = createGlobalStyle`
     font-family: 'sottotitolo';
     src: url('/font/sottotitolo.ttf');
 }
+
 
 
 *,
@@ -51,10 +53,14 @@ html {
 
 body {
   font-family: "Titillium Web", sans-serif;
-  color: var(--color-grey-900);
+  color: var(--color-grey-700);
   min-height: 100vh;
   line-height: 1.5;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
+  @media only screen and (min-width: 768px) {
+    font-size: 1.6rem;
+    
+  }
 }
 
 input,
@@ -111,6 +117,16 @@ h6 {
   overflow-wrap: break-word;
   hyphens: auto;
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+ color: var(--color-grey-500);
+}
+
 
 img {
   max-width: 100%;

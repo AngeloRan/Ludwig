@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import styled, { css } from "styled-components";
-import Menu from "./Menu";
+import MenuHeader from "../features/MenuHeader";
 import { Link } from "react-router-dom";
 import BtnPrenotazione from "./BtnPrenotazione";
 
@@ -56,7 +56,7 @@ const HeaderRow = styled.div`
     height: 100%;
     flex-direction: column;
     justify-content: flex-start;
-    gap: 35rem;
+    gap: 40%;
   }
 `;
 
@@ -197,7 +197,7 @@ function Header() {
         <IconaMenu open={open} onClick={handleOpen}></IconaMenu>
         <BtnPrenotazione head={true} open={open} />
       </HeaderRow>
-      <Menu open={open} onOpen={handleOpen} />
+      <MenuHeader open={open} onOpen={handleOpen} />
     </StyledHeader>
   );
 }
