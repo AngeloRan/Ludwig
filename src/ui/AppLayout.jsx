@@ -6,7 +6,7 @@ import BtnPrenotazione from "./BtnPrenotazione";
 const StyledAppLayout = styled.div`
   display: flex;
   flex-direction: column;
-  height: 100dvh;
+  min-height: 100dvh;
 `;
 
 const Main = styled.main`
@@ -40,9 +40,7 @@ function AppLayout() {
         <Outlet />
       </Main>
       <BtnPrenota>
-        <Link to="prenota">
-          <BtnPrenotazione />
-        </Link>
+        <BtnPrenotazione />
       </BtnPrenota>
     </StyledAppLayout>
   );

@@ -42,7 +42,7 @@ const StyledBtnPrenotazione = styled.span`
   }
   ${(props) => {
     return (
-      props.head &&
+      props.head === "head" &&
       css`
         display: none;
         @media only screen and (min-width: 768px) {

@@ -1,12 +1,13 @@
 import styled from "styled-components";
 import Presentazione from "../ui/Presentazione";
-import MenuPagina from "../features/MenuPagina";
+import MenuPagina from "../features/MenuPagina/MenuPagina";
+import SliderFoto from "../features/SliderFoto/SliderFoto";
 
 const VideoContainer = styled.div`
   width: 100%;
-  height: 70%;
+  height: 70dvh;
   @media only screen and (min-width: 768px) {
-    height: 100%;
+    height: 100dvh;
   }
 `;
 
@@ -30,14 +31,20 @@ const VideoEl = styled.video`
   }
 `;
 
-const ContainerMenu = styled.div`
+const ContainerHome = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 0 4%;
-  padding-bottom: 20rem;
-  @media only screen and (min-width: 768px) {
+  padding-bottom: 4rem;
+  @media only screen and (min-width: 768px) and (max-width: 1200px) {
+    padding-left: 30%;
+    padding-right: 14%;
+    padding-bottom: 10rem;
+  }
+  @media only screen and (min-width: 1201px) {
+    padding-bottom: 10rem;
     padding-left: 20%;
     padding-right: 14%;
   }
@@ -52,10 +59,12 @@ function Home() {
           Your browser is not supported!
         </VideoEl>
       </VideoContainer>
-      <ContainerMenu>
+      <ContainerHome>
         <Presentazione />
         <MenuPagina />
-      </ContainerMenu>
+      </ContainerHome>
+      <SliderFoto />
+      <p style={{ fontFamily: "Gruppo" }}>CANGURO</p>
     </>
   );
 }

@@ -27,15 +27,31 @@ const GlobalStyles = createGlobalStyle`
 
 
 
-@font-face {
+/* @font-face {
     font-family: 'titolo';
     src: url('/font/titolo.ttf');
 }
 @font-face {
     font-family: 'sottotitolo';
     src: url('/font/sottotitolo.ttf');
-}
+} */
 
+
+@font-face {
+    font-family: 'sottotitolo';
+    src: url('/font/sottotitolino.ttf');
+    font-display: swap;
+}
+@font-face {
+  font-family: 'gruppo';
+  src: url('/font/Gruppo-Regular.ttf');
+  font-display: swap;
+}
+/* @font-face {
+  font-family: 'syncopate' ;
+  src: url('/font/Syncopate-Regular.ttf');
+  font-display: swap;
+} */
 
 
 *,
@@ -53,7 +69,9 @@ html {
 
 body {
   font-family: "Titillium Web", sans-serif;
+  
   color: var(--color-grey-700);
+  background-color: var(--color-grey-50);
   min-height: 100vh;
   line-height: 1.5;
   font-size: 1.4rem;
@@ -62,6 +80,7 @@ body {
     
   }
 }
+
 
 input,
 button,
@@ -124,13 +143,97 @@ h3,
 h4,
 h5,
 h6 {
- color: var(--color-grey-500);
+ color: var(--color-grey-700);
+ /* font-family: "syncopate", sans-serif ; */
 }
 
 
 img {
   max-width: 100%;
 }
+
+
+@keyframes openLetter {
+
+  30% {
+    z-index: 100;
+  }
+
+  100% {
+    transform: rotateX(-180deg);
+    z-index: 50;
+  }
+}
+
+@keyframes closeLetter {
+
+  0% {
+    transform: rotateX(-180deg);
+    z-index: 50;
+  }
+
+  70% {
+    transform: rotateX(-180deg);
+    z-index: 50;
+  }
+  81%{
+    z-index: 100;
+  }
+
+  100% {
+    z-index: 100;
+    transform: rotate(0);
+  }
+  
+}
+
+@keyframes moveLetter{
+
+
+  0% {
+    transform: translateY(0);
+  }
+
+  49% {
+    z-index: 80;
+  }
+
+  50% {
+    transform: translateY(-100%);
+
+    z-index: 1001;
+  }
+
+  100% {
+  
+    transform: translateY(0);
+    z-index: 1001;
+  }
+}
+
+@keyframes resetLetter  {
+
+0% {
+  transform: translateY(0);
+  z-index: 1001;
+}
+
+49% {
+    z-index: 80;
+  }
+
+50% {
+    transform: translateY(-100%);
+  }
+
+100% {
+    transform: translateY(0);
+  }
+
+}
+
+
+
 `;
 
 export default GlobalStyles;
