@@ -38,6 +38,7 @@ function SliderFoto() {
   const [prevSlide, setPrevSlide] = useState(null);
 
   const ultima = currentSlide === fotos.length - 1;
+
   const ritornoacapo = prevSlide === fotos.length - 1;
 
   useEffect(() => {
@@ -47,13 +48,23 @@ function SliderFoto() {
           setPrevSlide(curr);
           return -1;
         });
+
+        setTimeout(
+          () =>
+            setCurrentSlide((curr) => {
+              setPrevSlide(curr);
+              return curr + 1;
+            }),
+          [100]
+        );
         return;
       }
+
       setCurrentSlide((curr) => {
         setPrevSlide(curr);
-        return curr < fotos.length - 1 ? curr + 1 : 0;
+        return curr + 1;
       });
-    }, 5000);
+    }, 4000);
 
     return () => clearInterval(intervallo);
   }, [fotos.length, ultima]);

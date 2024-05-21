@@ -64,7 +64,6 @@ function Home() {
         <MenuPagina />
       </ContainerHome>
       <SliderFoto />
-      <p style={{ fontFamily: "Gruppo" }}>CANGURO</p>
     </>
   );
 }
