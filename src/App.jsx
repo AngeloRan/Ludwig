@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import GlobalStyles from "./styles/GlobalStyles";
 import AppLayout from "./ui/AppLayout";
 import Home from "./pages/Home";
@@ -14,7 +14,8 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route element={<AppLayout />}>
-            <Route index element={<Home />} />
+            <Route index element={<Navigate replace to="home" />} />
+            <Route path="home" element={<Home />} />
             <Route path="menuservizi" element={<Menuservizi />} />
             <Route path="galleria" element={<Galleria />} />
             <Route path="contatti" element={<Contatti />} />

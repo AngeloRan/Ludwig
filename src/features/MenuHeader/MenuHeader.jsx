@@ -26,15 +26,18 @@ const StyledMenu = styled.div`
   }}
 `;
 const Lista = styled.ul`
+  /* font-family: "leggero", sans-serif; */
   height: 0;
   overflow: hidden;
-  font-weight: 200;
-  letter-spacing: 5px;
+  font-weight: 100;
+  letter-spacing: 3px;
   color: transparent;
-  font-size: 2rem;
+  font-size: 1.8rem;
   text-transform: uppercase;
+  font-family: "Syncopate", sans-serif;
   opacity: 0;
   transition: all 1s;
+  /* font-style: italic; */
   ${(props) =>
     props.open &&
     css`
@@ -43,8 +46,23 @@ const Lista = styled.ul`
     `}
   & li {
     margin-bottom: 4rem;
+    @media only screen and (min-width: 768px) {
+      margin-bottom: 40%;
+    }
     text-align: center;
-    color: var(--color-gold-lighter);
+    background-image: linear-gradient(
+        to right,
+        var(--color-gold-light),
+        var(--color-gold)
+      ),
+      linear-gradient(var(--color-gold-light), transparent);
+    /* background-image: linear-gradient(
+        to right,
+        var(--color-grey-50),
+        var(--color-grey-50)
+      ),
+      linear-gradient(var(--color-grey-50), transparent); */
+    background-blend-mode: hard-light;
     background-clip: text;
     transition: all 0.3s;
 
@@ -54,7 +72,7 @@ const Lista = styled.ul`
   }
 `;
 
-function Menu({ open, onOpen }) {
+function MenuHeader({ open, onOpen }) {
   return (
     <StyledMenu open={open}>
       <Lista open={open}>
@@ -65,7 +83,7 @@ function Menu({ open, onOpen }) {
         </li>
         <li>
           <NavLink to="/menuservizi" onClick={onOpen}>
-            Menu' Servizi
+            Menù Servizi
           </NavLink>
         </li>
         <li>
@@ -75,7 +93,7 @@ function Menu({ open, onOpen }) {
         </li>
         <li>
           <NavLink to="contatti" onClick={onOpen}>
-            Contatti{" "}
+            Contatti
           </NavLink>
         </li>
         <li>
@@ -88,4 +106,4 @@ function Menu({ open, onOpen }) {
   );
 }
 
-export default Menu;
+export default MenuHeader;
