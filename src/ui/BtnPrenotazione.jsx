@@ -49,12 +49,15 @@ const StyledBtnPrenotazione = styled.span`
           display: inline-block;
           position: absolute;
           top: 80%;
-          left: 20%;
+          left: 25%;
           ${(props) =>
             props.open &&
             css`
               display: none;
             `}
+        }
+        @media only screen and (min-width: 768px) and (max-width: 1480px) {
+          left: 15%;
         }
       `
     );

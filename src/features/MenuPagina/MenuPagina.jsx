@@ -4,8 +4,8 @@ import RowMenuPagina from "./RowMenuPagina";
 import { useInView } from "react-intersection-observer";
 
 const StyledMenuPagina = styled.div`
-  margin-top: 10rem;
-  margin-bottom: 5rem;
+  margin-top: 8rem;
+  /* margin-bottom: 5rem; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -26,7 +26,7 @@ const StyledMenuPagina = styled.div`
   @media only screen and (min-width: 768px) {
     padding: 6%;
     margin-top: 10%;
-    height: 80dvh;
+    min-height: 80dvh;
     justify-content: center;
   }
 
@@ -39,7 +39,6 @@ const StyledMenuPagina = styled.div`
 `;
 
 function MenuPagina() {
-  console.log("render");
   const { ref, inView } = useInView({
     triggerOnce: true,
     rootMargin: `100px 0px`,
@@ -61,7 +60,7 @@ function MenuPagina() {
       </RowMenuPagina>
       <RowMenuPagina
         to="/contatti"
-        p="Ci sono mille motivi per rimanere in contatto: segui le nostre attività sui social, rimani aggiornato su tutte le novità, proponici il tuo profilo professionale"
+        p="Ci sono mille motivi per rimanere in contatto: segui le nostre attività sui social, rimani aggiornato su tutte le novità"
       >
         Contatti
       </RowMenuPagina>

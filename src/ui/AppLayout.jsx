@@ -2,20 +2,24 @@ import { Link, Outlet } from "react-router-dom";
 import styled from "styled-components";
 import Header from "./Header";
 import BtnPrenotazione from "./BtnPrenotazione";
+import ArrowTopPage from "./ArrowTopPage";
 
 const StyledAppLayout = styled.div`
   display: flex;
   flex-direction: column;
   min-height: 100dvh;
+  /* overflow: hidden; */
 `;
 
 const Main = styled.main`
   min-height: 100dvh;
   background-color: var(--color-grey-50);
   width: 100%;
+  /* overflow: hidden; */
 `;
 
 const BtnPrenota = styled.div`
+  z-index: 100;
   position: fixed;
   height: 7rem;
   width: 100%;
@@ -33,6 +37,10 @@ const BtnPrenota = styled.div`
 `;
 
 function AppLayout() {
+  function scrollIntoTop() {
+    document.body.scrollIntoView({ behavior: "smooth" });
+  }
+
   return (
     <StyledAppLayout>
       <Header></Header>
@@ -42,6 +50,7 @@ function AppLayout() {
       <BtnPrenota>
         <BtnPrenotazione />
       </BtnPrenota>
+      <ArrowTopPage onScrollIntoTop={scrollIntoTop} />
     </StyledAppLayout>
   );
 }

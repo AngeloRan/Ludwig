@@ -75,6 +75,7 @@ body {
   min-height: 100vh;
   line-height: 1.5;
   font-size: 1.4rem;
+  /* overflow: hidden; */
   @media only screen and (min-width: 768px) {
     font-size: 1.6rem;
     

@@ -15,11 +15,20 @@ const StyledHeader = styled.header`
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
   /* transition: all 0.6s cubic-bezier(0.1, 0.5, 0.5, 1.5); */
   transition: all 0.5s ease;
+  overflow: hidden;
+
   @media only screen and (min-width: 768px) {
     height: 100dvh;
-    width: 20rem;
+    width: 25rem;
     clip-path: polygon(0 0, 100% 0, 90% 100%, 0 100%);
   }
+
+  @media only screen and (min-width: 768px) and (max-width: 1480px) {
+    height: 100dvh;
+    width: 19rem;
+    clip-path: polygon(0 0, 100% 0, 90% 100%, 0 100%);
+  }
+
   ${(props) => {
     return (
       !props.show &&
@@ -49,19 +58,32 @@ const StyledHeader = styled.header`
 `;
 
 const HeaderRow = styled.div`
+  position: relative;
   display: flex;
-  justify-content: space-between;
-  padding-right: 2rem;
+  justify-content: center;
+  align-items: center;
+  height: 14dvh;
   @media only screen and (min-width: 768px) {
+    align-items: center;
+    margin-top: 5rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 25rem;
     height: 100%;
     flex-direction: column;
     justify-content: flex-start;
-    gap: 40%;
+    gap: 35%;
   }
 `;
 
 const Titolo = styled.div`
   position: relative;
+  height: 50%;
+  @media only screen and (min-width: 768px) {
+    height: auto;
+  }
+
   & span {
     display: block;
     background-image: linear-gradient(
@@ -69,43 +91,40 @@ const Titolo = styled.div`
       var(--color-gold-light),
       var(--color-gold)
     );
-    /* background-image: linear-gradient(
-      to right,
-      var(--color-grey-50),
-      var(--color-grey-50)
-    ); */
     font-size: 1.4rem;
     color: transparent;
     background-clip: text;
-    /* font-family: "sottotitolo", sans-serif; */
     font-weight: 400;
 
     &:first-child {
-      /* font-family: "titolo", sans-serif; */
       font-family: "Syncopate", sans-serif;
-      /* font-family: "Gruppo", sans-serif; */
       letter-spacing: 3px;
-      font-size: 2.2rem;
+      font-size: 3rem;
       text-transform: uppercase;
       font-weight: 400;
-      padding-top: 2rem;
-      padding-left: 2rem;
+
       @media only screen and (min-width: 768px) {
-        font-size: 2.5rem;
-        padding-left: 3rem;
+        font-size: 3rem;
         letter-spacing: 4px;
+      }
+      @media only screen and (min-width: 768px) and (max-width: 1480px) {
+        font-size: 2.5rem;
+        margin-left: -6rem;
       }
     }
 
     &:last-child {
-      padding-left: 2.8rem;
-      width: 15rem;
-      transform: translateY(-75%) translateX(14%);
+      text-align: center;
+      margin-top: -1.5rem;
+      font-size: 1.8rem;
+      font-weight: 400;
       font-style: italic;
-
       @media only screen and (min-width: 768px) {
-        padding-left: 3rem;
-        transform: translateY(-75%) translateX(25%);
+        font-size: 1.8rem;
+      }
+      @media only screen and (min-width: 768px) and (max-width: 1480px) {
+        font-size: 1.5rem;
+        margin-left: -6rem;
       }
     }
   }
@@ -116,17 +135,24 @@ const IconaMenu = styled.div`
   position: relative;
   height: 1.2rem;
   width: 2.5rem;
-  margin-top: 3rem;
+  position: absolute;
+  right: 7%;
+  top: 35%;
   @media only screen and (min-width: 768px) {
-    margin-top: -6rem;
-    margin-left: 7.5rem;
+    position: relative;
+    top: 0;
     width: 3rem;
+    right: 3%;
+  }
+  @media only screen and (min-width: 768px) and (max-width: 1480px) {
+    right: 12%;
   }
   &::after {
     content: "";
     position: absolute;
     top: 70%;
     left: 0;
+
     height: 1px;
     width: 100%;
     background-image: linear-gradient(
@@ -142,6 +168,7 @@ const IconaMenu = styled.div`
     position: absolute;
     top: 0;
     left: 0;
+
     height: 1px;
     width: 100%;
     background-image: linear-gradient(
