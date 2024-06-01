@@ -27,19 +27,25 @@ const Scrollabile = styled.div`
   position: relative;
   height: 700dvh;
   width: 100%;
+  @media only screen and (min-width: 768px) {
+    margin-bottom: 10rem;
+  }
 `;
 
 const P = styled.p`
   margin-top: 5rem;
   height: 0;
-  /* overflow: hidden; */
+  font-style: italic;
   text-align: center;
+  line-height: 30px;
+  color: var(--color-grey-500);
 
   & span {
     color: var(--color-gold);
     font-weight: 700;
     font-size: 2rem;
     font-family: "syncopate" sans-serif;
+    font-style: normal;
   }
   ${(props) =>
     props.primoStep &&
@@ -253,6 +259,8 @@ const ScrittaMobile = styled.p`
   }
   padding: 10%;
   text-align: center;
+  line-height: 30px;
+  color: var(--color-grey-500);
 `;
 
 function Storia() {

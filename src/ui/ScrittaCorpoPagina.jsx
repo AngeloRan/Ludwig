@@ -6,6 +6,10 @@ const StyledScrittaCorpoPagina = styled.div`
   transform: translateX(-60%);
   transition: all 1.2s;
   text-align: center;
+  & p {
+    letter-spacing: 1px;
+    line-height: 30px;
+  }
   ${(props) =>
     props.inView &&
     css`

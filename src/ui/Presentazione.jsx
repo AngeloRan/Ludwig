@@ -45,7 +45,7 @@ function Presentazione({ children, type }) {
     <ScrittaCorpoPagina>
       {type === "iniziale" && (
         <>
-          <H2>Ludwig, passione per la perfezione</H2>
+          <H2>Ludwig passione per la perfezione</H2>
           <p>
             Benvenuti nel mondo di{" "}
             <LinkNomeAzienda>

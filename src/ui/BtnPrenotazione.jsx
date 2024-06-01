@@ -62,12 +62,24 @@ const StyledBtnPrenotazione = styled.span`
       `
     );
   }}
+
+  ${(props) =>
+    props.type === "Foot" &&
+    css`
+      display: none;
+      color: var(--color-gold);
+      font-weight: 100;
+      align-self: flex-start;
+      @media only screen and (min-width: 768px) {
+        display: inline-block;
+      }
+    `}
 `;
 
-function BtnPrenotazione({ head, open }) {
+function BtnPrenotazione({ head, open, type }) {
   return (
-    <StyledBtnPrenotazione head={head} open={open}>
-      <Link to="prenota">Prenota</Link>
+    <StyledBtnPrenotazione head={head} open={open} type={type}>
+      <Link to="prenota">Info & Prenota</Link>
     </StyledBtnPrenotazione>
   );
 }

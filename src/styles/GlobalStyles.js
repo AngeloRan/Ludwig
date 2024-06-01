@@ -70,7 +70,7 @@ html {
 body {
   font-family: "Titillium Web", sans-serif;
   
-  color: var(--color-grey-700);
+  color: var(--color-grey-500);
   background-color: var(--color-grey-50);
   min-height: 100vh;
   line-height: 1.5;

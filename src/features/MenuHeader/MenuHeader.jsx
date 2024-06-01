@@ -56,12 +56,7 @@ const Lista = styled.ul`
         var(--color-gold)
       ),
       linear-gradient(var(--color-gold-light), transparent);
-    /* background-image: linear-gradient(
-        to right,
-        var(--color-grey-50),
-        var(--color-grey-50)
-      ),
-      linear-gradient(var(--color-grey-50), transparent); */
+
     background-blend-mode: hard-light;
     background-clip: text;
     transition: all 0.3s;

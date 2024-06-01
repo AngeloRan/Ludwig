@@ -4,12 +4,14 @@ import styled, { css } from "styled-components";
 const StyledContainerFotoMobile = styled.div`
   width: 100%;
   transition: all 1.5s ease;
-  transform: translateX(100%);
+  transform: translateX(80%);
+  opacity: 0;
   margin-top: -3rem;
 
   ${(props) =>
     props.inView &&
     css`
+      opacity: 1;
       transform: translateX(0);
     `}
 `;
