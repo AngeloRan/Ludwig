@@ -12,15 +12,20 @@ if [ "$1" == 'start' ]; then
     npm i
     npm run build
     npm install -g serve
-    serve -s dist &
 
     if [ "$#" -ge 3 ]; then
+        serve -s dist &
         DOMAIN="$3"
         sed -i "s/SERVERNAME/$DOMAIN/g" /etc/nginx/nginx.conf && \
-        sleep 3 && service nginx start & \
+        sleep 3 && service nginx start 
+    else
+        serve -s dist     
     fi
+
 fi
 
 if [ "$1" == 'bash' ]; then
     /bin/bash
 fi
+
+# workaround when nginx is not started tail -f /dev/null
