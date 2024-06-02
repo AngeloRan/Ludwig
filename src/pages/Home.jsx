@@ -70,7 +70,7 @@ function Home() {
     <>
       <VideoContainer>
         <VideoEl autoPlay muted loop>
-          <source src="../public/barbiere.mp4" type="video/mp4" />
+          <source src="/barbiere.mp4" type="video/mp4" />
           Your browser is not supported!
         </VideoEl>
       </VideoContainer>
