@@ -202,22 +202,30 @@ function Header() {
 
   useEffect(() => {
     let isScrolling;
+    let puntoDiPartenza = window.scrollY;
 
-    function handleScroll() {
+    function handleScroll(e) {
       if (window.innerWidth >= 768) return;
       setShow(false);
       clearTimeout(isScrolling);
 
       isScrolling = setTimeout(() => {
-        setShow(true);
-      }, 300);
+        if (window.scrollY < puntoDiPartenza) setShow(true);
+        puntoDiPartenza = window.scrollY;
+      }, 200);
+    }
+
+    function handleResize() {
+      setShow(true);
     }
 
     window.addEventListener("scroll", handleScroll);
+    window.addEventListener("resize", handleResize);
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
       clearTimeout(isScrolling);
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
 

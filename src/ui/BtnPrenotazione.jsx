@@ -79,7 +79,7 @@ const StyledBtnPrenotazione = styled.span`
 function BtnPrenotazione({ head, open, type }) {
   return (
     <StyledBtnPrenotazione head={head} open={open} type={type}>
-      <Link to="prenota">Info & Prenota</Link>
+      <Link to="prenota">Prenota</Link>
     </StyledBtnPrenotazione>
   );
 }
