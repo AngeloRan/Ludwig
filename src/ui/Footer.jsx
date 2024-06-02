@@ -12,7 +12,7 @@ const StyledFooter = styled.footer`
   background-color: var(--color-grey-100);
   margin-bottom: 7rem;
 
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 1401px) {
     height: auto;
     z-index: 5000;
     margin-bottom: 0;
@@ -29,6 +29,9 @@ const StyledFooter = styled.footer`
 `;
 
 const RowFooter = styled.div`
+  @media only screen and (min-width: 768px) and (max-width: 1400px) {
+    padding-left: 30%;
+  }
   text-align: center;
   & h5 {
     margin-bottom: 1rem;
