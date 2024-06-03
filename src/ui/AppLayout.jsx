@@ -43,7 +43,7 @@ function AppLayout() {
 
   return (
     <StyledAppLayout>
-      <Header></Header>
+      {/* <Header></Header> */}
       <Main>
         <Outlet />
       </Main>

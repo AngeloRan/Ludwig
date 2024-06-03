@@ -94,6 +94,7 @@ const Titolo = styled.div`
     font-size: 1.4rem;
     color: transparent;
     background-clip: text;
+    -webkit-background-clip: text;
     font-weight: 400;
 
     &:first-child {

@@ -30,7 +30,7 @@ const StyledFooter = styled.footer`
 
 const RowFooter = styled.div`
   @media only screen and (min-width: 768px) and (max-width: 1400px) {
-    padding-left: 30%;
+    padding-left: 27%;
   }
   text-align: center;
   & h5 {
