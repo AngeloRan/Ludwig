@@ -7,12 +7,12 @@ import ArrowTopPage from "./ArrowTopPage";
 const StyledAppLayout = styled.div`
   display: flex;
   flex-direction: column;
-  min-height: 100dvh;
+  min-height: 100vh;
   /* overflow: hidden; */
 `;
 
 const Main = styled.main`
-  min-height: 100dvh;
+  min-height: 100vh;
   background-color: var(--color-grey-50);
   width: 100%;
   /* overflow: hidden; */
@@ -43,7 +43,7 @@ function AppLayout() {
 
   return (
     <StyledAppLayout>
-      {/* <Header></Header> */}
+      <Header></Header>
       <Main>
         <Outlet />
       </Main>

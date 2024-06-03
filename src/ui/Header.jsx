@@ -7,7 +7,7 @@ import BtnPrenotazione from "./BtnPrenotazione";
 const StyledHeader = styled.header`
   z-index: 1000;
   position: fixed;
-  height: 14dvh;
+  height: 14vh;
   width: 100%;
   top: 0;
   left: 0;
@@ -18,13 +18,13 @@ const StyledHeader = styled.header`
   overflow: hidden;
 
   @media only screen and (min-width: 768px) {
-    height: 100dvh;
+    height: 100vh;
     width: 25rem;
     clip-path: polygon(0 0, 100% 0, 90% 100%, 0 100%);
   }
 
   @media only screen and (min-width: 768px) and (max-width: 1480px) {
-    height: 100dvh;
+    height: 100vh;
     width: 19rem;
     clip-path: polygon(0 0, 100% 0, 90% 100%, 0 100%);
   }
@@ -46,7 +46,7 @@ const StyledHeader = styled.header`
       css`
         /* transition: all 0.5s cubic-bezier(0.1, 0.5, 0.5, 1.5); */
         transition: all 0.7s cubic-bezier(0.68, -0.55, 0.27, 1.55);
-        height: 100dvh;
+        height: 100vh;
         clip-path: none;
         @media only screen and (min-width: 768px) {
           width: 100%;
@@ -62,7 +62,7 @@ const HeaderRow = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 14dvh;
+  height: 14vh;
   @media only screen and (min-width: 768px) {
     align-items: center;
     margin-top: 5rem;

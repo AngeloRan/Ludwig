@@ -8,7 +8,7 @@ import ContainerFotoMobile from "./ContainerFotoMobile";
 const DivFix = styled.div`
   position: sticky;
   width: 100%;
-  height: 100dvh;
+  height: 100vh;
   top: 0;
   left: 0;
 
@@ -25,7 +25,7 @@ const DivFix = styled.div`
 
 const Scrollabile = styled.div`
   position: relative;
-  height: 700dvh;
+  height: 700vh;
   width: 100%;
   @media only screen and (min-width: 768px) {
     margin-bottom: 10rem;
@@ -50,7 +50,7 @@ const P = styled.p`
   ${(props) =>
     props.primoStep &&
     css`
-      height: calc(((var(--scroll)) - 0.125) * 30dvh);
+      height: calc(((var(--scroll)) - 0.125) * 30vh);
     `}
 
   ${(props) =>
@@ -59,7 +59,7 @@ const P = styled.p`
       ${(props) =>
         props.secondoStep &&
         css`
-          height: calc(((var(--scroll)) - 0.5) * 30dvh);
+          height: calc(((var(--scroll)) - 0.5) * 30vh);
         `}
       ${(props) =>
         props.terzoStep &&
@@ -189,13 +189,13 @@ const FotoCapitoloPrimo = styled.div`
   transition: all 1s ease;
   @media only screen and (min-width: 768px) and (max-width: 1200px) {
     width: 100%;
-    height: 40dvh;
+    height: 40vh;
   }
   @media only screen and (min-width: 1201px) {
     width: 100%;
-    height: 60dvh;
+    height: 60vh;
   }
-  height: 60dvh;
+  height: 60vh;
 
   ${(props) =>
     props.type !== "seconda" &&
@@ -242,7 +242,7 @@ const ContainerTuttoMobile = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10dvh;
+  gap: 10vh;
 `;
 
 const FotoMobile = styled.img`

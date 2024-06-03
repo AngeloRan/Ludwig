@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
 const ContainerVideo = styled.div`
-  height: 70dvh;
+  height: 70vh;
   @media only screen and (min-width: 768px) {
-    height: 100dvh;
+    height: 100vh;
   }
   width: 100%;
   /* background-color: red; */

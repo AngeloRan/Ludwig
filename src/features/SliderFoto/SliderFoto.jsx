@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 const StyledSliderFoto = styled.div`
   position: relative;
-  height: 60dvh;
+  height: 60vh;
   width: 100%;
   overflow: hidden;
   opacity: 0;
@@ -25,7 +25,7 @@ const StyledSliderFoto = styled.div`
   @media only screen and (min-width: 768px) and (max-width: 1200px) {
     width: 75%;
     margin-left: 25%;
-    height: 80dvh;
+    height: 80vh;
     /* margin-bottom: 10%; */
     border-bottom-left-radius: 3px;
     border-top-left-radius: 3px;
@@ -33,7 +33,7 @@ const StyledSliderFoto = styled.div`
   @media only screen and (min-width: 1201px) {
     width: 82%;
     margin-left: 18%;
-    height: 85dvh;
+    height: 85vh;
     /* margin-bottom: 10%; */
     border-bottom-left-radius: 3px;
     border-top-left-radius: 3px;

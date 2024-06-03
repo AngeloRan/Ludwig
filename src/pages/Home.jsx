@@ -9,9 +9,9 @@ import Footer from "../ui/Footer";
 
 const VideoContainer = styled.div`
   width: 100%;
-  height: 70dvh;
+  height: 70vh;
   @media only screen and (min-width: 768px) {
-    height: 100dvh;
+    height: 100vh;
   }
 `;
 
