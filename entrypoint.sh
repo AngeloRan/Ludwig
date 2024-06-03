@@ -9,7 +9,9 @@ if [ "$1" == 'start' ]; then
     export ORIGIN="$ORIGIN" 
     
     cd /app
+    rm -rf dist
     npm i
+    npm install react-icons
     npm run build
     npm install -g serve
 

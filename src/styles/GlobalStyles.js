@@ -60,6 +60,7 @@ const GlobalStyles = createGlobalStyle`
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  backface-visibility: hidden;
 
 }
 
@@ -70,11 +71,12 @@ html {
 body {
   font-family: "Titillium Web", sans-serif;
   
-  color: var(--color-grey-700);
+  color: var(--color-grey-500);
   background-color: var(--color-grey-50);
   min-height: 100vh;
   line-height: 1.5;
   font-size: 1.4rem;
+  /* overflow: hidden; */
   @media only screen and (min-width: 768px) {
     font-size: 1.6rem;
     
