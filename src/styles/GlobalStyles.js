@@ -122,6 +122,7 @@ button:has(svg) {
 a {
   color: inherit;
   text-decoration: none;
+  -webkit-tap-highlight-color: transparent
 }
 
 ul {
@@ -149,6 +150,9 @@ h6 {
  /* font-family: "syncopate", sans-serif ; */
 }
 
+div {
+  -webkit-tap-highlight-color: transparent
+}
 
 img {
   max-width: 100%;

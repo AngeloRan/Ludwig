@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import BtnPrenotazione from "./BtnPrenotazione";
 import { FaInstagram } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
@@ -11,10 +11,17 @@ const StyledFooter = styled.footer`
   width: 100%;
   background-color: var(--color-grey-100);
   margin-bottom: 7rem;
-
-  @media only screen and (min-width: 1401px) {
+  ${(props) =>
+    (props.page =
+      "menuservizi" &&
+      css`
+        margin-top: 10rem;
+        @media only screen and (min-width: 768px) {
+          margin-top: 15rem;
+        }
+      `)}
+  @media only screen and (min-width: 1400px) {
     height: auto;
-    z-index: 5000;
     margin-bottom: 0;
     flex-direction: row;
     padding-top: 3%;
@@ -26,12 +33,17 @@ const StyledFooter = styled.footer`
   }
   position: relative;
   padding: 15% 15% 10%;
+  @media only screen and (min-width: 768px) and (max-width: 1200px) {
+    padding-left: 30%;
+    padding-right: 14%;
+  }
+  @media only screen and (min-width: 1201px) {
+    padding-left: 20%;
+    padding-right: 14%;
+  }
 `;
 
 const RowFooter = styled.div`
-  @media only screen and (min-width: 768px) and (max-width: 1400px) {
-    padding-left: 27%;
-  }
   text-align: center;
   & h5 {
     margin-bottom: 1rem;
@@ -79,12 +91,12 @@ const StyledFaWhatsapp = styled(FaWhatsapp)`
   color: var(--color-gold);
 `;
 
-function Footer() {
+function Footer({ page }) {
   return (
-    <StyledFooter>
-      <RowFooter>
+    <StyledFooter page={page}>
+      {/* <RowFooter>
         <BtnPrenotazione type="Foot" />
-      </RowFooter>
+      </RowFooter> */}
       <RowFooter>
         <H5>Dove siamo</H5>
         <p>Str. Volvera, 9, </p>

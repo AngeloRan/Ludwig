@@ -10,6 +10,7 @@ const StyledScrittaCorpoPagina = styled.div`
     letter-spacing: 1px;
     line-height: 30px;
   }
+
   ${(props) =>
     props.inView &&
     css`

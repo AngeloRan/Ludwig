@@ -52,8 +52,11 @@ function Presentazione({ children, type }) {
               <Link to="/menuservizi">Ludwig Hair Couture</Link>
             </LinkNomeAzienda>
             , dove l'arte per la cura dei capelli si fonde con l'esperienza e la
-            passione. Presso il nostro salone di parrucchieri trasformiamo ogni
-            cliente in un'icona di bellezza.
+            passione.
+            <p>
+              Presso il nostro salone di parrucchieri trasformiamo ogni cliente
+              in un'icona di bellezza.
+            </p>
           </p>
           <p>
             Scoprite il nostro regno di trattamenti personalizzati, tagli su

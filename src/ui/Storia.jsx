@@ -275,7 +275,7 @@ function Storia() {
     window.innerWidth > 768 ? "large" : "small"
   );
 
-  const altezza = containerRef?.current?.offsetHeight;
+
 
   useEffect(() => {
     const calculateDivTop = () => {
@@ -331,7 +331,7 @@ function Storia() {
             <ContainerCapitoli primoStep={primoStep}>
               <ContainerCapitoloSingolo type="primo" terzoStep={terzoStep}>
                 <FotoCapitoloPrimo>
-                  <IMG src="../../public/img/2001.jpeg" alt="Foto 2001"></IMG>
+                  <IMG src="/img/2001.jpeg" alt="Foto 2001"></IMG>
                 </FotoCapitoloPrimo>
                 <P primoStep={primoStep}>
                   <span>2001</span> Ludwig nasce dal sogno della fondatrice
@@ -348,7 +348,7 @@ function Storia() {
                 quartoStep={quartoStep}
               >
                 <FotoCapitoloPrimo type="seconda" terzoStep={terzoStep}>
-                  <IMG src="../../public/img/2001.jpeg" alt="Foto 2024"></IMG>
+                  <IMG src="/img/2001.jpeg" alt="Foto 2024"></IMG>
                 </FotoCapitoloPrimo>
                 <P
                   type="secondoCapitolo"
@@ -372,7 +372,7 @@ function Storia() {
             <H2 type="storia">Come ci siamo arrivati...</H2>
           </ScrittaCorpoPagina>
           <ContainerFotoMobile>
-            <FotoMobile src="../../public/img/2001.jpeg"></FotoMobile>
+            <FotoMobile src="/img/2001.jpeg"></FotoMobile>
             <ScrittaMobile>
               <span>2001</span> Ludwig nasce dal sogno della fondatrice Daniela,
               che dopo anni di esperienza in una grossa compagnia del settore,
@@ -382,7 +382,7 @@ function Storia() {
             </ScrittaMobile>
           </ContainerFotoMobile>
           <ContainerFotoMobile>
-            <FotoMobile src="../../public/img/2001.jpeg"></FotoMobile>
+            <FotoMobile src="/img/2001.jpeg"></FotoMobile>
             <ScrittaMobile>
               <span>2024</span> Dopo 23 anni, e con l’ingresso dei figli
               nell’attività, Ludwig decide di rinnovare per offrire un servizio

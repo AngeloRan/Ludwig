@@ -1,8 +1,9 @@
-import { Link, Outlet } from "react-router-dom";
+import { Link, Outlet, useLocation } from "react-router-dom";
 import styled from "styled-components";
 import Header from "./Header";
 import BtnPrenotazione from "./BtnPrenotazione";
 import ArrowTopPage from "./ArrowTopPage";
+import { useEffect } from "react";
 
 const StyledAppLayout = styled.div`
   display: flex;
@@ -37,6 +38,13 @@ const BtnPrenota = styled.div`
 `;
 
 function AppLayout() {
+  const { pathname } = useLocation();
+  console.log(pathname);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
   function scrollIntoTop() {
     document.body.scrollIntoView({ behavior: "smooth" });
   }
