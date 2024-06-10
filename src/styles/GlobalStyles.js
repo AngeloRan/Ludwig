@@ -1,6 +1,9 @@
 import { createGlobalStyle } from "styled-components";
+import { MapContainer, TileLayer, useMap } from "react-leaflet";
 
 const GlobalStyles = createGlobalStyle`
+
+
 
 :root {
       /* Grey */
@@ -22,19 +25,11 @@ const GlobalStyles = createGlobalStyle`
   --color-gold-light: #F1e5ac;
   --color-gold-lighter: #FFF8DC;
 
-
 }
 
 
 
-/* @font-face {
-    font-family: 'titolo';
-    src: url('/font/titolo.ttf');
-}
-@font-face {
-    font-family: 'sottotitolo';
-    src: url('/font/sottotitolo.ttf');
-} */
+
 
 
 @font-face {
@@ -47,11 +42,7 @@ const GlobalStyles = createGlobalStyle`
   src: url('/font/Gruppo-Regular.ttf');
   font-display: swap;
 }
-/* @font-face {
-  font-family: 'syncopate' ;
-  src: url('/font/Syncopate-Regular.ttf');
-  font-display: swap;
-} */
+
 
 
 *,
@@ -236,6 +227,33 @@ img {
     transform: translateY(0);
   }
 
+}
+
+.leaflet-popup .leaflet-popup-content-wrapper {
+  background-color: var(--color-grey-100);
+  color: var(--color-grey-600);
+  border-radius: 5px;
+  padding-right: 0.6rem;
+}
+
+.leaflet-popup .leaflet-popup-content {
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.leaflet-popup .leaflet-popup-content span:first-child {
+  font-size: 2.5rem;
+  line-height: 1;
+}
+
+.leaflet-popup .leaflet-popup-tip {
+  background-color: var(--color-grey-100);
+}
+
+.leaflet-popup-content-wrapper {
+  border-left: 5px solid var(--color-gold);
 }
 
 

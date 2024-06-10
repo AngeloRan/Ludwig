@@ -1,12 +1,12 @@
 import styled, { css } from "styled-components";
-import ScrittaCorpoPagina from "./ScrittaCorpoPagina";
+import ScrittaCorpoPagina from "../../ui/ScrittaCorpoPagina";
 
-import H4 from "./H4";
+import H4 from "../../ui/H4";
 import { ServiziContext } from "./ContainerRowMenuServizi";
 import { useContext } from "react";
 
 const StyledRowMenuServizi = styled.div`
-  transition: all 0.4s ease;
+  transition: transform 0.6s ease, max-height 0.4s ease, opacity 0.2s ease;
   opacity: 0;
   max-height: 0;
   overflow: hidden;
@@ -16,7 +16,7 @@ const StyledRowMenuServizi = styled.div`
   ${(props) =>
     props.isOpen &&
     css`
-      transition: all 0.8s ease;
+      transition: transform 0.8s ease, opacity: .8s ease;;
       opacity: 1;
       /* overflow: visible; */
       max-height: 160rem;
@@ -40,10 +40,10 @@ const ContainerHome = styled.div`
   @media only screen and (min-width: 768px) and (max-width: 1200px) {
     padding-left: 30%;
     padding-right: 14%;
-    padding-bottom: 5rem;
+    /* padding-bottom: 5rem; */
   }
   @media only screen and (min-width: 1201px) {
-    padding-bottom: 5rem;
+    /* padding-bottom: 5rem; */
     padding-left: 20%;
     padding-right: 14%;
   }
@@ -59,7 +59,7 @@ const PSeparatore = styled.p`
     transparent 99%
   );
   @media only screen and (min-width: 768px) {
-    margin: 5rem auto;
+    margin: 5rem auto 0;
     width: 40%;
   }
 `;

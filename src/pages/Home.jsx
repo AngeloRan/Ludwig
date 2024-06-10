@@ -6,34 +6,7 @@ import H2 from "../ui/H2";
 import Storia from "../ui/Storia";
 import ScrittaCorpoPagina from "../ui/ScrittaCorpoPagina";
 import Footer from "../ui/Footer";
-
-const VideoContainer = styled.div`
-  width: 100%;
-  height: 70vh;
-  @media only screen and (min-width: 768px) {
-    height: 100vh;
-  }
-`;
-
-const VideoEl = styled.video`
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  display: block;
-  opacity: 0;
-  animation-name: Show-video;
-  animation-duration: 1s;
-  animation-timing-function: ease-out;
-  animation-fill-mode: forwards;
-  @keyframes Show-video {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-`;
+import VideoFotoIniziale from "../ui/VideoFotoIniziale";
 
 const ContainerHome = styled.div`
   width: 100%;
@@ -68,16 +41,26 @@ const ContainerSlide = styled.div`
 function Home() {
   return (
     <>
-      <VideoContainer>
-        <VideoEl autoPlay muted loop>
-          <source src="/barbiere.mp4" type="video/mp4" />
-          Your browser is not supported!
-        </VideoEl>
-      </VideoContainer>
+      <VideoFotoIniziale
+        tipo="video"
+        autoPlay
+        muted
+        loop
+        src="/barbiere.mp4"
+        type="video/mp4"
+      />
+
       <ContainerHome>
         <Presentazione type="iniziale" />
         <MenuPagina />
-        <Presentazione type="inframmezzo"></Presentazione>
+        <Presentazione type="inframmezzo" author="Eiselle">
+          {" "}
+          "Per trovare il tuo look, la sperimentazione è sempre cosa buona e
+          giusta: capelli lunghi, corti, lisci, ricci, morbidi o naturali, alla
+          Monna Lisa, punk, spettinati, acconciati ad arte, non importa. Quello
+          che importa è che sia siano sani, perché coi capelli sani puoi fare
+          ciò che vuoi."
+        </Presentazione>
       </ContainerHome>
 
       <ContainerSlide>

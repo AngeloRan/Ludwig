@@ -27,7 +27,20 @@ const StyledH2 = styled.h2`
       font-family: "syncopate", sans-serif;
       color: var(--color-gold);
       padding-bottom: 0;
-      text-shadow: 0 0 8px var(--color-gold);
+    `}
+  ${(props) =>
+    props.type === "prenotazioni" &&
+    css`
+      display: inline-block;
+      font-family: "syncopate", sans-serif;
+      margin-top: 5vh;
+      padding: 0 7%;
+      width: 100%;
+      letter-spacing: 3px;
+      color: var(--color-gold);
+      @media only screen and (min-width: 768px) {
+        letter-spacing: 5px;
+      }
     `}
 `;
 

@@ -1,23 +1,16 @@
 import styled, { css } from "styled-components";
 import Footer from "../ui/Footer";
-import ScrittaCorpoPagina from "../ui/ScrittaCorpoPagina";
 import Overlay from "../ui/Overlay";
 import { createContext, useState } from "react";
+import H2 from "../ui/H2";
+import VideoFotoIniziale from "../ui/VideoFotoIniziale";
 
-const StyledGalleria = styled.div``;
-
-const ContainerVideo = styled.div`
-  height: 70vh;
-  @media only screen and (min-width: 768px) {
-    height: 100vh;
-  }
-  width: 100%;
-`;
-
-const Video = styled.video`
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+const StyledGalleria = styled.div`
+  background-image: linear-gradient(
+    to bottom right,
+    var(--color-grey-50),
+    var(--color-grey-200)
+  );
 `;
 
 const ContainerGalleria = styled.div`
@@ -26,17 +19,6 @@ const ContainerGalleria = styled.div`
   flex-direction: column;
   align-items: center;
   padding: 0 4%;
-  ${(props) =>
-    props.type === "galleria" &&
-    css`
-      padding-top: 5rem;
-      background-image: linear-gradient(
-        to bottom right,
-        var(--color-grey-50),
-        var(--color-grey-200)
-      );
-      padding-bottom: 20rem;
-    `}
 
   @media only screen and (min-width: 768px) and (max-width: 1200px) {
     padding-left: 30%;
@@ -56,15 +38,36 @@ const ContainerFoto = styled.div`
   grid-template-columns: 1fr 1fr;
   grid-auto-rows: 20vh;
   backface-visibility: hidden;
+
   @media only screen and (min-width: 768px) {
     grid-auto-rows: 30vh;
-    width: 70%;
+    width: 80%;
   }
   @media only screen and (min-width: 1201px) {
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-auto-rows: 30vh;
-    gap: 5rem;
-    row-gap: 5rem;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-auto-rows: 40vh;
+    gap: 3rem;
+    row-gap: 3rem;
+  }
+`;
+
+const TitoloContainerFoto = styled.div`
+  margin-top: 5rem;
+  width: 100%;
+  margin-bottom: 5rem;
+  @media only screen and (min-width: 768px) {
+    margin-bottom: 10rem;
+  }
+  text-align: center;
+
+  & > p {
+    font-size: 1.8rem;
+    color: var(--color-grey-500);
+    font-style: italic;
+    margin: 5% 20%;
+    @media only screen and (min-width: 768px) {
+      margin: 0% 20%;
+    }
   }
 `;
 
@@ -73,6 +76,7 @@ const Foto = styled.picture`
   overflow: hidden;
   backface-visibility: hidden;
   box-shadow: 0rem 0.5rem 1rem rgba(0, 0, 0, 0.4);
+  background-color: transparent;
 `;
 
 const FotoImg = styled.img`
@@ -92,37 +96,44 @@ const FotoImg = styled.img`
   }
 `;
 
-const GalleriaContext = createContext();
+export const GalleriaContext = createContext({});
 
 function Galleria() {
   const immagini = new Array(20).fill("./img/capelli.jpg");
 
   const [isFotoOpen, setIsFotoOpen] = useState(false);
-  const [srcOpen, setSrcOpen] = useState(null);
+  const [srcOpen, setSrcOpen] = useState("");
 
+  function handleSrcOpen(e) {
+    setSrcOpen(e?.target?.src ? e.target.src : "");
+  }
   function handleOpen(e) {
     setIsFotoOpen((isFotoOpen) => !isFotoOpen);
     handleSrcOpen(e);
   }
 
-  function handleSrcOpen(e) {
-    setSrcOpen(e.target.src);
-  }
-
   return (
     <StyledGalleria>
       <GalleriaContext.Provider value={{ isFotoOpen, srcOpen, handleOpen }}>
-        <ContainerVideo>
-          <Overlay></Overlay>
-          <Video autoPlay muted loop>
-            <source src="/menuservizi.mp4" type="video/mp4" />
-            Your browser is not supported
-          </Video>
-        </ContainerVideo>
-        <ContainerGalleria>
-          <ScrittaCorpoPagina>ciao</ScrittaCorpoPagina>
-        </ContainerGalleria>
+        <Overlay />
+        <VideoFotoIniziale
+          tipo="video"
+          autoPlay
+          muted
+          loop
+          src="/menuservizi.mp4"
+          type="video/mp4"
+        />
+
+        <ContainerGalleria></ContainerGalleria>
         <ContainerGalleria type="galleria">
+          <TitoloContainerFoto>
+            <H2 dorata={true}>Galleria</H2>
+            <p>
+              Lasciati ispirare dalle nostre creazioni e sorprenditi di quello
+              che anche tu puoi diventare...
+            </p>
+          </TitoloContainerFoto>
           <ContainerFoto>
             {immagini.map((el) => (
               <Foto>
@@ -131,10 +142,10 @@ function Galleria() {
             ))}
           </ContainerFoto>
         </ContainerGalleria>
-        <Footer />
+        <Footer page="menuservizi" type="galleria" />
       </GalleriaContext.Provider>
     </StyledGalleria>
   );
 }
-export { GalleriaContext };
+
 export default Galleria;

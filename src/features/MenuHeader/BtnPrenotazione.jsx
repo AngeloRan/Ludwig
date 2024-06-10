@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import styled, { css } from "styled-components";
 
@@ -77,9 +78,24 @@ const StyledBtnPrenotazione = styled.span`
 `;
 
 function BtnPrenotazione({ head, open, type }) {
+  const [larghezza, setLarghezza] = useState(null);
+
+  useEffect(() => {
+    setLarghezza(window.innerWidth);
+
+    function handleResize() {
+      setLarghezza(window.innerWidth);
+    }
+
+    window.addEventListener("resize", handleResize);
+
+    return window.removeEventListener("resize", handleResize);
+  }, [setLarghezza]);
+
   return (
     <StyledBtnPrenotazione head={head} open={open} type={type}>
-      <Link to="prenota">Prenota</Link>
+      {larghezza >= 768 && <Link to="prenota">Prenota</Link>}
+      {larghezza < 768 && "Prenota"}
     </StyledBtnPrenotazione>
   );
 }

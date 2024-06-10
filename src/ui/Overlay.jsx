@@ -51,9 +51,61 @@ const ImgOverlay = styled.img`
     `}
 `;
 
+const CloseIcon = styled.div`
+  cursor: pointer;
+  height: 1.2rem;
+  width: 2.5rem;
+  position: absolute;
+  right: 7%;
+  top: 10%;
+
+  ${(props) =>
+    !props.isFotoOpen &&
+    css`
+      display: none;
+    `}
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 70%;
+    left: 0;
+
+    height: 1px;
+    width: 100%;
+    background-image: linear-gradient(
+      to right,
+      var(--color-gold-light),
+      var(--color-gold)
+    );
+
+    transform: rotate(-45deg);
+    transform-origin: 0% 0%;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    height: 1px;
+    width: 100%;
+    background-image: linear-gradient(
+      to right,
+      var(--color-gold-light),
+      var(--color-gold)
+    );
+
+    transform: rotate(45deg);
+    transform-origin: 0% 0%;
+  }
+`;
+
 function Overlay() {
-  const { srcOpen, isFotoOpen, handleOpen } = useContext(GalleriaContext);
   const ImgRef = useRef();
+
+  const { srcOpen, isFotoOpen, handleOpen } = useContext(GalleriaContext);
 
   function closeOverlay(e) {
     if (ImgRef?.current?.contains(e.target)) return;
@@ -62,6 +114,7 @@ function Overlay() {
 
   return (
     <StyledOverlay isFotoOpen={isFotoOpen} onClick={closeOverlay}>
+      <CloseIcon isFotoOpen={isFotoOpen} />
       <FotoOverlay>
         <ImgOverlay
           ref={ImgRef}

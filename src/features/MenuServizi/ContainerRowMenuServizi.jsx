@@ -1,6 +1,5 @@
 import { createContext, useContext, useState } from "react";
 import styled, { css } from "styled-components";
-import H2 from "./H2";
 
 const StyledContainerRowMenuServizi = styled.div`
   display: flex;
@@ -42,8 +41,6 @@ const StyledH2o = styled.h2`
   @media only screen and (min-width: 1201px) {
     display: inline-block;
     font-size: 3.5rem;
-    padding-bottom: 3rem;
-    padding-top: 5rem;
   }
   text-transform: uppercase;
   font-weight: 100;
@@ -62,7 +59,7 @@ const StyledH2o = styled.h2`
     props.isOpen &&
     css`
       color: var(--color-gold);
-      text-shadow: 0 0 8px var(--color-gold);
+      /* text-shadow: 0 0 8px var(--color-gold); */
     `}
 `;
 

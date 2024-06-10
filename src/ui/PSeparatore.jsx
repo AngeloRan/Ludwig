@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import styled, { css } from "styled-components";
-import { ServiziContext } from "./ContainerRowMenuServizi";
+import { ServiziContext } from "../features/MenuServizi/ContainerRowMenuServizi";
 
 const StyledPSeparatore = styled.p`
   transition: all 0.5s;

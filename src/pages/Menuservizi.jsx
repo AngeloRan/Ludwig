@@ -4,27 +4,13 @@ import ScrittaCorpoPagina from "../ui/ScrittaCorpoPagina";
 import Footer from "../ui/Footer";
 
 import { LiaWhatsapp } from "react-icons/lia";
-import RowMenuServizi from "../ui/RowMenuServizi";
+import RowMenuServizi from "../features/MenuServizi/RowMenuServizi";
 
-import { ContainerRowMenuServizi } from "../ui/ContainerRowMenuServizi";
-import { IoIosArrowDown } from "react-icons/io";
-import ToggleArrowMenuServizi from "../ui/ToggleArrowMenuServizi";
+import { ContainerRowMenuServizi } from "../features/MenuServizi/ContainerRowMenuServizi";
+
+import ToggleArrowMenuServizi from "../features/MenuServizi/ToggleArrowMenuServizi";
 import PSeparatore from "../ui/PSeparatore";
-const ContainerVideo = styled.div`
-  height: 70vh;
-  @media only screen and (min-width: 768px) {
-    height: 100vh;
-  }
-  width: 100%;
-  /* background-color: red; */
-`;
-
-const Video = styled.video`
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  /* filter: brightness(95%); */
-`;
+import VideoFotoIniziale from "../ui/VideoFotoIniziale";
 
 const ContainerMenuservizi = styled.div`
   width: 100%;
@@ -207,16 +193,17 @@ function Menuservizi() {
     ],
   };
 
-  const { styling, colorCouture, technical, ludwigRituals } = servizi;
-
   return (
     <>
-      <ContainerVideo>
-        <Video autoPlay muted loop>
-          <source src="/menuservizi.mp4" type="video/mp4" />
-          Your browser is not supported
-        </Video>
-      </ContainerVideo>
+      <VideoFotoIniziale
+        tipo="video"
+        autoPlay
+        muted
+        loop
+        src="/menuservizi.mp4"
+        type="video/mp4"
+      />
+
       <ContainerMenuservizi type="primo">
         <ScrittaCorpoPagina>
           <p>
@@ -244,7 +231,7 @@ function Menuservizi() {
       {Object.entries(servizi).map((el, i, arr) => (
         <ContainerRowMenuServizi>
           <ContainerMenuservizi>
-            <ScrittaCorpoPagina>
+            <ScrittaCorpoPagina type="servizi">
               <ContainerRowMenuServizi.H2o dorata={true}>
                 {el[0].match(/[A-Z]/g)
                   ? el[0].replace(/([A-Z])/g, " $1")
