@@ -16,10 +16,11 @@ if [ "$1" == 'start' ]; then
     npm install -g serve
 
     if [ "$#" -ge 3 ]; then
-        serve -s dist &
+        serve -s dist 
         DOMAIN="$3"
-        sed -i "s/SERVERNAME/$DOMAIN/g" /etc/nginx/nginx.conf && \
-        sleep 3 && service nginx start 
+        sed -i "s/SERVERNAME/$DOMAIN/g" /etc/nginx/nginx.conf  
+        sleep 3 
+        service nginx start 
     else
         serve -s dist     
     fi
