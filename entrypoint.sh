@@ -8,23 +8,24 @@ if [ "$1" == 'start' ]; then
     # node init
     export ORIGIN="$ORIGIN" 
     
-    exec cd /app
-    exec rm -rf dist
-    exec npm i
-    exec npm install react-icons
-    exec npm run build
-    exec npm install -g serve
+    cd /app
+    rm -rf dist
+    npm i
+    npm install react-icons
+    npm run build
+    npm install -g serve
 
     if [ "$#" -ge 3 ]; then
-        exec serve -s dist &
+        serve -s dist &
         DOMAIN="$3"
-        exec sed -i "s/SERVERNAME/$DOMAIN/g" /etc/nginx/nginx.conf  
-        exec sleep 3 
+        sed -i "s/SERVERNAME/$DOMAIN/g" /etc/nginx/nginx.conf  
+        sleep 3 
         exec service nginx start 
         
     else
-        exec serve -s dist     
+        serve -s dist     
     fi
+
 fi
 
 if [ "$1" == 'bash' ]; then
