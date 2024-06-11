@@ -1,25 +1,24 @@
-import { Link, Outlet } from "react-router-dom";
+import { Link, Outlet, useLocation } from "react-router-dom";
 import styled from "styled-components";
 import Header from "./Header";
-import BtnPrenotazione from "./BtnPrenotazione";
-import ArrowTopPage from "./ArrowTopPage";
+import BtnPrenotazione from "../features/MenuHeader/BtnPrenotazione";
+import ArrowTopPage from "../features/MenuHeader/ArrowTopPage";
+import { useEffect } from "react";
 
 const StyledAppLayout = styled.div`
   display: flex;
   flex-direction: column;
-  min-height: 100dvh;
-  /* overflow: hidden; */
+  min-height: 100vh;
 `;
 
 const Main = styled.main`
-  min-height: 100dvh;
+  min-height: 100vh;
   background-color: var(--color-grey-50);
   width: 100%;
-  /* overflow: hidden; */
 `;
 
 const BtnPrenota = styled.div`
-  z-index: 100;
+  z-index: 5001;
   position: fixed;
   height: 7rem;
   width: 100%;
@@ -37,19 +36,27 @@ const BtnPrenota = styled.div`
 `;
 
 function AppLayout() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
   function scrollIntoTop() {
     document.body.scrollIntoView({ behavior: "smooth" });
   }
 
   return (
     <StyledAppLayout>
-      {/* <Header></Header> */}
+      <Header></Header>
       <Main>
         <Outlet />
       </Main>
-      <BtnPrenota>
-        <BtnPrenotazione />
-      </BtnPrenota>
+      <Link to="prenota">
+        <BtnPrenota>
+          <BtnPrenotazione />
+        </BtnPrenota>
+      </Link>
       <ArrowTopPage onScrollIntoTop={scrollIntoTop} />
     </StyledAppLayout>
   );

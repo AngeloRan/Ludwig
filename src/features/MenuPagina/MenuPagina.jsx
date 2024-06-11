@@ -26,7 +26,7 @@ const StyledMenuPagina = styled.div`
   @media only screen and (min-width: 768px) {
     padding: 6%;
     margin-top: 10%;
-    min-height: 80dvh;
+    min-height: 80vh;
     justify-content: center;
   }
 

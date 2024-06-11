@@ -8,7 +8,7 @@ import ContainerFotoMobile from "./ContainerFotoMobile";
 const DivFix = styled.div`
   position: sticky;
   width: 100%;
-  height: 100dvh;
+  height: 100vh;
   top: 0;
   left: 0;
 
@@ -25,7 +25,7 @@ const DivFix = styled.div`
 
 const Scrollabile = styled.div`
   position: relative;
-  height: 700dvh;
+  height: 700vh;
   width: 100%;
   @media only screen and (min-width: 768px) {
     margin-bottom: 10rem;
@@ -50,7 +50,7 @@ const P = styled.p`
   ${(props) =>
     props.primoStep &&
     css`
-      height: calc(((var(--scroll)) - 0.125) * 30dvh);
+      height: calc(((var(--scroll)) - 0.125) * 30vh);
     `}
 
   ${(props) =>
@@ -59,7 +59,7 @@ const P = styled.p`
       ${(props) =>
         props.secondoStep &&
         css`
-          height: calc(((var(--scroll)) - 0.5) * 30dvh);
+          height: calc(((var(--scroll)) - 0.5) * 30vh);
         `}
       ${(props) =>
         props.terzoStep &&
@@ -189,13 +189,13 @@ const FotoCapitoloPrimo = styled.div`
   transition: all 1s ease;
   @media only screen and (min-width: 768px) and (max-width: 1200px) {
     width: 100%;
-    height: 40dvh;
+    height: 40vh;
   }
   @media only screen and (min-width: 1201px) {
     width: 100%;
-    height: 60dvh;
+    height: 60vh;
   }
-  height: 60dvh;
+  height: 60vh;
 
   ${(props) =>
     props.type !== "seconda" &&
@@ -242,7 +242,7 @@ const ContainerTuttoMobile = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10dvh;
+  gap: 10vh;
 `;
 
 const FotoMobile = styled.img`
@@ -275,7 +275,7 @@ function Storia() {
     window.innerWidth > 768 ? "large" : "small"
   );
 
-  const altezza = containerRef?.current?.offsetHeight;
+
 
   useEffect(() => {
     const calculateDivTop = () => {
@@ -331,7 +331,7 @@ function Storia() {
             <ContainerCapitoli primoStep={primoStep}>
               <ContainerCapitoloSingolo type="primo" terzoStep={terzoStep}>
                 <FotoCapitoloPrimo>
-                  <IMG src="../../public/img/2001.jpeg" alt="Foto 2001"></IMG>
+                  <IMG src="/img/2001.jpeg" alt="Foto 2001"></IMG>
                 </FotoCapitoloPrimo>
                 <P primoStep={primoStep}>
                   <span>2001</span> Ludwig nasce dal sogno della fondatrice
@@ -348,7 +348,7 @@ function Storia() {
                 quartoStep={quartoStep}
               >
                 <FotoCapitoloPrimo type="seconda" terzoStep={terzoStep}>
-                  <IMG src="../../public/img/2001.jpeg" alt="Foto 2024"></IMG>
+                  <IMG src="/img/2001.jpeg" alt="Foto 2024"></IMG>
                 </FotoCapitoloPrimo>
                 <P
                   type="secondoCapitolo"
@@ -372,7 +372,7 @@ function Storia() {
             <H2 type="storia">Come ci siamo arrivati...</H2>
           </ScrittaCorpoPagina>
           <ContainerFotoMobile>
-            <FotoMobile src="../../public/img/2001.jpeg"></FotoMobile>
+            <FotoMobile src="/img/2001.jpeg"></FotoMobile>
             <ScrittaMobile>
               <span>2001</span> Ludwig nasce dal sogno della fondatrice Daniela,
               che dopo anni di esperienza in una grossa compagnia del settore,
@@ -382,7 +382,7 @@ function Storia() {
             </ScrittaMobile>
           </ContainerFotoMobile>
           <ContainerFotoMobile>
-            <FotoMobile src="../../public/img/2001.jpeg"></FotoMobile>
+            <FotoMobile src="/img/2001.jpeg"></FotoMobile>
             <ScrittaMobile>
               <span>2024</span> Dopo 23 anni, e con l’ingresso dei figli
               nell’attività, Ludwig decide di rinnovare per offrire un servizio

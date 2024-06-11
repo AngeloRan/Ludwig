@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useInView } from "react-intersection-observer";
 import { Link } from "react-router-dom";
 import styled, { css } from "styled-components";
+import H3 from "../../ui/H3";
 
 const StyledRowMenuPagina = styled.div`
   /* flex: 1; */
@@ -45,23 +46,6 @@ const StyledRowMenuPagina = styled.div`
         opacity: 1;
       }
     `};
-`;
-
-const H3 = styled.h3`
-  cursor: pointer;
-  font-family: "syncopate", sans-serif;
-  font-weight: 300;
-  letter-spacing: 4px;
-  font-size: 1.8rem;
-  text-transform: uppercase;
-  color: transparent;
-  background-color: var(--color-gold);
-  background-clip: text;
-  margin-bottom: 0.5rem;
-  @media only screen and (min-width: 768px) {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-  }
 `;
 
 const P = styled.p`

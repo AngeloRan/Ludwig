@@ -10,6 +10,7 @@ const StyledScrittaCorpoPagina = styled.div`
     letter-spacing: 1px;
     line-height: 30px;
   }
+
   ${(props) =>
     props.inView &&
     css`
@@ -18,6 +19,14 @@ const StyledScrittaCorpoPagina = styled.div`
     `}
 
   padding: 5rem 3rem 0 3rem;
+
+  ${(props) =>
+    props.type === "servizi" &&
+    css`
+      @media only screen and (min-width: 768px) {
+        padding-top: 0px;
+      }
+    `}
 
   ${(props) =>
     props.type === "nospace" &&

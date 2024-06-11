@@ -2,12 +2,12 @@ import { useEffect, useState } from "react";
 import styled, { css } from "styled-components";
 import MenuHeader from "../features/MenuHeader/MenuHeader";
 import { Link } from "react-router-dom";
-import BtnPrenotazione from "./BtnPrenotazione";
+import BtnPrenotazione from "../features/MenuHeader/BtnPrenotazione";
 
 const StyledHeader = styled.header`
   z-index: 1000;
   position: fixed;
-  height: 14dvh;
+  height: 14vh;
   width: 100%;
   top: 0;
   left: 0;
@@ -18,13 +18,13 @@ const StyledHeader = styled.header`
   overflow: hidden;
 
   @media only screen and (min-width: 768px) {
-    height: 100dvh;
+    height: 100vh;
     width: 25rem;
     clip-path: polygon(0 0, 100% 0, 90% 100%, 0 100%);
   }
 
   @media only screen and (min-width: 768px) and (max-width: 1480px) {
-    height: 100dvh;
+    height: 100vh;
     width: 19rem;
     clip-path: polygon(0 0, 100% 0, 90% 100%, 0 100%);
   }
@@ -46,7 +46,7 @@ const StyledHeader = styled.header`
       css`
         /* transition: all 0.5s cubic-bezier(0.1, 0.5, 0.5, 1.5); */
         transition: all 0.7s cubic-bezier(0.68, -0.55, 0.27, 1.55);
-        height: 100dvh;
+        height: 100vh;
         clip-path: none;
         @media only screen and (min-width: 768px) {
           width: 100%;
@@ -62,7 +62,7 @@ const HeaderRow = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 14dvh;
+  height: 14vh;
   @media only screen and (min-width: 768px) {
     align-items: center;
     margin-top: 5rem;
@@ -77,6 +77,59 @@ const HeaderRow = styled.div`
   }
 `;
 
+// const Titolo = styled.div`
+//   position: relative;
+//   height: 50%;
+//   @media only screen and (min-width: 768px) {
+//     height: auto;
+//   }
+
+//   & span {
+//     display: block;
+//     background-image: linear-gradient(
+//       to right,
+//       var(--color-gold-light),
+//       var(--color-gold)
+//     );
+//     font-size: 1.4rem;
+//     color: transparent;
+//     background-clip: text;
+//     -webkit-background-clip: text;
+//     font-weight: 400;
+
+//     &:first-child {
+//       font-family: "Syncopate", sans-serif;
+//       letter-spacing: 3px;
+//       font-size: 3rem;
+//       text-transform: uppercase;
+//       font-weight: 400;
+
+//       @media only screen and (min-width: 768px) {
+//         font-size: 3rem;
+//         letter-spacing: 4px;
+//       }
+//       @media only screen and (min-width: 768px) and (max-width: 1480px) {
+//         font-size: 2.5rem;
+//         margin-left: -6rem;
+//       }
+//     }
+
+//     &:last-child {
+//       text-align: center;
+//       margin-top: -1.5rem;
+//       font-size: 1.8rem;
+//       font-weight: 400;
+//       font-style: italic;
+//       @media only screen and (min-width: 768px) {
+//         font-size: 1.8rem;
+//       }
+//       @media only screen and (min-width: 768px) and (max-width: 1480px) {
+//         font-size: 1.5rem;
+//         margin-left: -6rem;
+//       }
+//     }
+//   }
+// `;
 const Titolo = styled.div`
   position: relative;
   height: 50%;
@@ -84,49 +137,51 @@ const Titolo = styled.div`
     height: auto;
   }
 
-  & span {
-    display: block;
+  & h2,
+  & h3 {
+    text-align: center;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
     background-image: linear-gradient(
       to right,
       var(--color-gold-light),
       var(--color-gold)
     );
-    font-size: 1.4rem;
-    color: transparent;
-    background-clip: text;
-    -webkit-background-clip: text;
+  }
+
+  & h2 {
+    font-family: "Syncopate", sans-serif;
+    letter-spacing: 6px;
+    font-size: 3rem;
+    text-transform: uppercase;
     font-weight: 400;
 
-    &:first-child {
-      font-family: "Syncopate", sans-serif;
-      letter-spacing: 3px;
+    @media only screen and (min-width: 768px) {
       font-size: 3rem;
-      text-transform: uppercase;
-      font-weight: 400;
-
-      @media only screen and (min-width: 768px) {
-        font-size: 3rem;
-        letter-spacing: 4px;
-      }
-      @media only screen and (min-width: 768px) and (max-width: 1480px) {
-        font-size: 2.5rem;
-        margin-left: -6rem;
-      }
+      letter-spacing: 6px;
     }
-
-    &:last-child {
-      text-align: center;
-      margin-top: -1.5rem;
-      font-size: 1.8rem;
-      font-weight: 400;
-      font-style: italic;
-      @media only screen and (min-width: 768px) {
-        font-size: 1.8rem;
-      }
-      @media only screen and (min-width: 768px) and (max-width: 1480px) {
-        font-size: 1.5rem;
-        margin-left: -6rem;
-      }
+    @media only screen and (min-width: 768px) and (max-width: 1480px) {
+      font-size: 2.5rem;
+      letter-spacing: 5px;
+      margin-left: -6rem;
+    }
+  }
+  & h3 {
+    font-family: "Syncopate", sans-serif;
+    letter-spacing: 5px;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin-top: -1rem;
+    @media only screen and (min-width: 768px) {
+      font-size: 1.4rem;
+      letter-spacing: 4px;
+      margin-left: -3px;
+    }
+    @media only screen and (min-width: 768px) and (max-width: 1480px) {
+      font-size: 1.1rem;
+      margin-left: -6rem;
     }
   }
 `;
@@ -238,9 +293,13 @@ function Header() {
     <StyledHeader show={show} open={open}>
       <HeaderRow>
         <Titolo>
-          <Link to="/" onClick={() => setOpen(false)}>
+          {/* <Link to="/" onClick={() => setOpen(false)}>
             <span>Ludwig</span>
             <span>Hair Couture</span>
+          </Link> */}
+          <Link to="/" onClick={() => setOpen(false)}>
+            <h2>LUDWIG</h2>
+            <h3>HAIR COUTURE</h3>
           </Link>
         </Titolo>
         <IconaMenu open={open} onClick={handleOpen}></IconaMenu>

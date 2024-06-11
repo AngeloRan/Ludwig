@@ -9,12 +9,10 @@ const StyledMenu = styled.div`
   opacity: 0;
   height: 0;
 
-  /* display: none; */
   ${(props) => {
     return (
       props.open &&
       css`
-        /* display: block; */
         transition: all 0.5s;
         opacity: 1;
         height: auto;
@@ -26,7 +24,6 @@ const StyledMenu = styled.div`
   }}
 `;
 const Lista = styled.ul`
-  /* font-family: "leggero", sans-serif; */
   height: 0;
   overflow: hidden;
   font-weight: 100;
@@ -37,7 +34,7 @@ const Lista = styled.ul`
   font-family: "Syncopate", sans-serif;
   opacity: 0;
   transition: all 1s;
-  /* font-style: italic; */
+
   ${(props) =>
     props.open &&
     css`
