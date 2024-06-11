@@ -21,7 +21,7 @@ if [ "$1" == 'start' ]; then
         sed -i "s/SERVERNAME/$DOMAIN/g" /etc/nginx/nginx.conf  
         sleep 3 
         exec service nginx start 
-        
+        tail -f /dev/null
     else
         serve -s dist     
     fi
