@@ -293,10 +293,6 @@ function Header() {
     <StyledHeader show={show} open={open}>
       <HeaderRow>
         <Titolo>
-          {/* <Link to="/" onClick={() => setOpen(false)}>
-            <span>Ludwig</span>
-            <span>Hair Couture</span>
-          </Link> */}
           <Link to="/" onClick={() => setOpen(false)}>
             <h2>LUDWIG</h2>
             <h3>HAIR COUTURE</h3>

@@ -11,7 +11,8 @@ const StyledRowMenuServizi = styled.div`
   max-height: 0;
   overflow: hidden;
   backface-visibility: hidden;
-  transform: translateY(-100px);
+  transform: translateY(-300px);
+  background-color: var(--color-grey-100);
 
   ${(props) =>
     props.isOpen &&
@@ -21,10 +22,10 @@ const StyledRowMenuServizi = styled.div`
       /* overflow: visible; */
       max-height: 160rem;
       backface-visibility: hidden;
-      transform: translateY(-20px);
+      transform: translateY(10px);
 
       @media only screen and (min-width: 768px) {
-        transform: translateY(-80px);
+        transform: translateY(-55px);
       }
     `}
 `;
@@ -35,17 +36,18 @@ const ContainerHome = styled.div`
   flex-direction: column;
   align-items: center;
   padding: 0 4%;
-  padding-bottom: 4rem;
   /* overflow: hidden; */
   @media only screen and (min-width: 768px) and (max-width: 1200px) {
     padding-left: 30%;
     padding-right: 14%;
     /* padding-bottom: 5rem; */
+    padding-bottom: 4rem;
   }
   @media only screen and (min-width: 1201px) {
     /* padding-bottom: 5rem; */
     padding-left: 20%;
     padding-right: 14%;
+    padding-bottom: 4rem;
   }
 `;
 
@@ -81,7 +83,7 @@ function RowMenuServizi({ titolo, prezzo, descrizione, ultimo }) {
   return (
     <StyledRowMenuServizi isOpen={isOpen}>
       <ContainerHome>
-        <ScrittaCorpoPagina>
+        <ScrittaCorpoPagina type="noview">
           <H4>{titolo}</H4>
           <P>{descrizione}</P>
           <Prezzo>{prezzo !== "da convenire" ? `${prezzo}€` : prezzo}</Prezzo>

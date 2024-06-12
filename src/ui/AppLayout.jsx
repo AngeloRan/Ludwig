@@ -18,6 +18,7 @@ const Main = styled.main`
 `;
 
 const BtnPrenota = styled.div`
+  cursor: pointer;
   z-index: 5001;
   position: fixed;
   height: 7rem;

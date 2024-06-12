@@ -19,6 +19,7 @@ const StyledPSeparatore = styled.p`
   ${(props) =>
     props.type === "gold" &&
     css`
+      margin-top: 0;
       height: 1px;
       width: 20rem;
       background-image: linear-gradient(

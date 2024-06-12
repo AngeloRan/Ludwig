@@ -97,10 +97,14 @@ const FotoImg = styled.img`
 `;
 
 export const GalleriaContext = createContext({});
+const fotogalleria = [
+  "./public/img/foto_1.PNG",
+  "./public/img/foto_2.PNG",
+  "./public/img/foto_3.PNG",
+  "./public/img/foto_4.PNG",
+];
 
 function Galleria() {
-  const immagini = new Array(20).fill("./img/capelli.jpg");
-
   const [isFotoOpen, setIsFotoOpen] = useState(false);
   const [srcOpen, setSrcOpen] = useState("");
 
@@ -135,13 +139,14 @@ function Galleria() {
             </p>
           </TitoloContainerFoto>
           <ContainerFoto>
-            {immagini.map((el) => (
+            {fotogalleria.map((el) => (
               <Foto>
                 <FotoImg src={el} onClick={handleOpen} />
               </Foto>
             ))}
           </ContainerFoto>
         </ContainerGalleria>
+
         <Footer page="menuservizi" type="galleria" />
       </GalleriaContext.Provider>
     </StyledGalleria>

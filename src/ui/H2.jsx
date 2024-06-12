@@ -38,6 +38,7 @@ const StyledH2 = styled.h2`
       width: 100%;
       letter-spacing: 3px;
       color: var(--color-gold);
+      font-size: 2.8rem;
       @media only screen and (min-width: 768px) {
         letter-spacing: 5px;
       }

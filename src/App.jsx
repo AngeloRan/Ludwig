@@ -8,7 +8,7 @@ import Spinner from "./ui/Spinner";
 const Home = lazy(() => import("./pages/Home"));
 const Menuservizi = lazy(() => import("./pages/Menuservizi"));
 const Galleria = lazy(() => import("./pages/Galleria"));
-const Contatti = lazy(() => import("./pages/Contatti"));
+const Contatti = lazy(() => import("./pages/Prenota"));
 const Prenota = lazy(() => import("./pages/Prenota"));
 
 function App() {
@@ -23,7 +23,6 @@ function App() {
               <Route path="home" element={<Home />} />
               <Route path="menuservizi" element={<Menuservizi />} />
               <Route path="galleria" element={<Galleria />} />
-              <Route path="contatti" element={<Contatti />} />
               <Route path="prenota" element={<Prenota />} />
             </Route>
           </Routes>

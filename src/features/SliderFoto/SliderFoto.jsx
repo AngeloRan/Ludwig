@@ -42,9 +42,9 @@ const StyledSliderFoto = styled.div`
 
 function SliderFoto() {
   const fotos = [
-    "https://i.pinimg.com/564x/53/94/f1/5394f1dd8b2ad94fb213c4e68a8ecee7.jpg",
-    "https://i.pinimg.com/736x/dd/dc/ca/dddcca5e157a1ef07f18b6453c921b3c.jpg",
-    "https://i.pinimg.com/564x/9a/ce/6d/9ace6d1618018d269972e6e8e7872899.jpg",
+    "./public/img/foto_1.PNG",
+    "./public/img/foto_2.PNG",
+    "./public/img/foto_3.PNG",
   ];
 
   const { ref, inView } = useInView({

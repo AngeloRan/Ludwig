@@ -8,6 +8,7 @@ const StyledH4 = styled.h3`
   text-transform: uppercase;
   color: transparent;
   background-color: var(--color-gold);
+  /* background-color: var(--color-grey-500); */
   background-clip: text;
   margin-bottom: 1.5rem;
   @media only screen and (min-width: 768px) {

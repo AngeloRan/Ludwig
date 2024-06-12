@@ -4,8 +4,9 @@ import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import styled from "styled-components";
 
 const FrecciaGiu = styled(IoIosArrowDown)`
-  color: var(--color-grey-400);
-  font-size: 2rem;
+  /* color: var(--color-grey-400); */
+  color: var(--color-gold);
+  font-size: 1.5rem;
   transform: translateY(100%);
   cursor: pointer;
   @media only screen and (min-width: 768px) {
@@ -15,7 +16,8 @@ const FrecciaGiu = styled(IoIosArrowDown)`
 `;
 const FrecciaSu = styled(IoIosArrowUp)`
   color: var(--color-grey-400);
-  font-size: 2rem;
+  /* color: var(--color-gold); */
+  font-size: 1.5rem;
   transform: translateY(100%);
   cursor: pointer;
   @media only screen and (min-width: 768px) {
