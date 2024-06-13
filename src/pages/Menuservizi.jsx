@@ -66,7 +66,7 @@ function Menuservizi() {
       },
       {
         titolo: "Piega",
-        prezzo: "24-29",
+        prezzo: "da 24",
         descrizione:
           "I nostri hairstylist si dedicano a creare asciugature impeccabili e personalizzate per soddisfare le esigenze individuali di ogni cliente. Sia che tu stia cercando un look elegante per un'occasione speciale o desideri semplicemente un tocco di glamour nella tua routine quotidiana, il nostro team è qui per trasformare la tua visione in realtà.",
       },
@@ -78,7 +78,7 @@ function Menuservizi() {
       },
       {
         titolo: "Taglio maschile",
-        prezzo: "25",
+        prezzo: "24",
         descrizione:
           "Con il nostro servizio di taglio maschile, ti offriamo molto più di una semplice visita dal parrucchiere. I nostri esperti lavorano con precisione e attenzione ai dettagli per creare un look su misura che si adatti perfettamente alla tua personalità e al tuo viso . Che tu stia cercando un taglio classico o se desideri sperimentare un look più audace e moderno, siamo qui per realizzare il tuo desiderio.",
       },
@@ -92,49 +92,49 @@ function Menuservizi() {
     colorCouture: [
       {
         titolo: "All over color",
-        prezzo: "40/45",
+        prezzo: "da 40",
         descrizione:
           "Un colore personalizzato in base alla consulenza del tuo tecnico, eseguito solitamente per coprire i capelli bianchi ogni  3/4 settimane",
       },
       {
         titolo: "Glaze",
-        prezzo: "20",
+        prezzo: "da 20",
         descrizione:
           "Enfatizza o modifica la tonalità dei tuoi capelli, sempre eseguito dopo le schiariture per dare una tonalità unica.È un ottimo mantenimento fra una sessione di colore e l’altra",
       },
       {
         titolo: "Golden Aura",
-        prezzo: "85",
+        prezzo: "da 85",
         descrizione:
           "E' un servizio di schiariture che parte dalle radici, perfetto per chi vuole vedersi molto chiara su tutti i capelli, anche sulla base, dando tridimensionalità al suo colore naturale)",
       },
       {
         titolo: "Partial Golden Aura",
-        prezzo: "65",
+        prezzo: "da 65",
         descrizione:
           "Cosa cambia da quello precedente? La quantità di schiaritura è concentrata sulla sommità, ideale come mantenimento dopo 8/10 settimane aver fatto il servizio Golden Aura.",
       },
       {
         titolo: "Total Bleached",
-        prezzo: " 95",
+        prezzo: "da 95",
         descrizione:
           "Se cerchi un cambio look di grande personalità e vuoi schiarire completamente tutti i tuoi capelli dalla radice alle punte, questo è il servizio che fa per te",
       },
       {
         titolo: "Full blending",
-        prezzo: "85",
+        prezzo: "da 85",
         descrizione:
           "Il Full Blending è come dipingere delicatamente i tuoi capelli con un effetto di scrittura naturale e graduale , Con questa tecnica il capello viene schiarito creando un effetto luminoso e multidimensionale, con sfumature che si fondono armoniosamente con il tuo colore naturale dei capelli. È perfetto per aggiungere movimento e luminosità alla tua chioma.Per un look a prova di Pinterest!",
       },
       {
         titolo: "Soft  blending",
-        prezzo: "65",
+        prezzo: "da 65",
         descrizione:
           "Cosa cambia dal full? La quantità di capelli schiarita è minore, per dare movimento alle lunghezze ma con un effetto ancora più  naturale, come se fossero schiariti dal sole. Mantenimento medio-basso",
       },
       {
         titolo: "SHADOWING",
-        prezzo: "75",
+        prezzo: "da 75",
         descrizione:
           "Lo Shadowing è come dare ai tuoi capelli un makeover in 3D! Utilizziamo diverse tonalità di colore per creare ombre e luci che accentuano le caratteristiche del tuo viso e dei tuoi capelli, aggiungendo profondità e dimensione. È come scolpire i tuoi capelli per valorizzare al meglio la tua bellezza naturale.  ",
       },
@@ -142,19 +142,19 @@ function Menuservizi() {
     technical: [
       {
         titolo: "A CURL CAN DREAM",
-        prezzo: "60",
+        prezzo: "da 60",
         descrizione:
           "Esalta la bellezza naturale dei tuoi capelli con il nostro servizio di ondulazione professionale. Grazie alla nostra esperienza e alle tecniche all'avanguardia, creiamo onde morbide o ricci definiti che si adattano perfettamente alla tua personalità e al tuo stile di vita. Con un'attenzione meticolosa ai dettagli e l'uso di prodotti di altissima qualità, garantiamo risultati duraturi e impeccabili. Affidati al nostro team di professionisti per ottenere un’ondulazione che aggiunga volume, movimento o un tocco di glamour alla tua chioma, per un look che ti farà sentire unica in ogni occasione.",
       },
       {
         titolo: "LUXE SMOOTHING",
-        prezzo: "250",
+        prezzo: "da 200",
         descrizione:
           "Sogni i tuoi capelli lisci e impeccabili? Il nostro servizio di trattamento alla keratina è la risposta ai tuoi desideri. trasforma i capelli ribelli e crespi in una morbida seta, la nostra formula innovativa a base di keratina doma i ricci più indomabili ed elimina il crespo senza compromettere la vitalità dei tuoi capelli. Dimentica le lunghe ore trascorse a lisciare la tua chioma ogni mattina e goditi la libertà di capelli perfettamente lisci, fluidi e lucenti, grazie al nostro trattamento alla keratina. Abbraccia la bellezza senza sforzo e la praticità di una chioma impeccabile in ogni situazione.Durata fino a cinque mesi. Mantenimento semplice at home con 2 prodotti.",
       },
       {
         titolo: "WHY BE FRIZZ",
-        prezzo: "100",
+        prezzo: "da 100",
         descrizione:
           "Goditi una chioma dall'aspetto naturale e senza crespo con il nostro trattamento ANTIFRIZZ personalizzato. Con la nostra formula speciale, idratiamo e eliminiamo il crespo dai tuoi capelli mentre preserviamo il loro naturale movimento. Il risultato? Capelli lussuosi, morbidi e gestibili, con la tua ondulazione, che aggiunge movimento e vitalità al tuo look per riflettere la tua bellezza in ogni occasione.",
       },
@@ -174,7 +174,7 @@ function Menuservizi() {
     ludwigRituals: [
       {
         titolo: "Essential ritual",
-        prezzo: "15",
+        prezzo: "14",
         descrizione:
           "I nostri Essential ritual sono una serie di trattamenti per qualsiasi esigenza del capello, grazie alla tecnologia nanomolecolare otterrai una bellezza impeccabile, in tempi record, senza compromessi.",
       },
@@ -193,6 +193,10 @@ function Menuservizi() {
     ],
   };
 
+  const PI = styled.p`
+    /* font-size: 2.5rem; */
+  `;
+
   return (
     <>
       <VideoFotoIniziale
@@ -206,24 +210,24 @@ function Menuservizi() {
 
       <ContainerMenuservizi type="primo">
         <ScrittaCorpoPagina>
-          <p>
+          <PI>
             Il cliente è il centro del nostro mondo.
             <br />
             Scoprite il nostro catalogo di servizi esclusivi e prenotate un
             appuntamento.
-          </p>
-          <p>
-            Se desiderate una consulenza gratuita senza impegno, per maggiori
-            informazioni sui nostri trattamenti o per conunicarci esigenze
-            particolari prima di prenotare, chattate direttamente con uno dei
-            nostri stylist cliccando sull'icona sotto. Il team di Ludwig è a
-            vostra disposizione.
+          </PI>
+          <PI>
+            Se desiderate una <b>consulenza gratuita</b> senza impegno, per
+            maggiori informazioni sui nostri trattamenti o per comunicarci
+            esigenze particolari prima di prenotare, chattate direttamente con
+            uno dei nostri stylist cliccando sull'icona sotto. Il team di Ludwig
+            è a vostra disposizione.
             <p>
               <a href="https://wa.me/+393661574143">
                 <StyledFaWhatsapp />
               </a>
             </p>
-          </p>
+          </PI>
 
           <PSeparatore />
         </ScrittaCorpoPagina>
