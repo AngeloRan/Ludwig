@@ -34,8 +34,10 @@ ContainerRowMenuServizi.H2o = H2o;
 export { ContainerRowMenuServizi, ServiziContext };
 
 const StyledH2o = styled.h2`
+  backface-visibility: hidden;
+  will-change: transform;
   position: relative;
-  font-size: 2.4rem;
+  font-size: 2rem;
   transition: all 0.3s;
   cursor: pointer;
   @media only screen and (min-width: 1201px) {
@@ -45,7 +47,10 @@ const StyledH2o = styled.h2`
   text-transform: uppercase;
   font-weight: 100;
   padding-bottom: 2rem;
-  letter-spacing: 8px;
+  letter-spacing: 5px;
+  @media only screen and (min-width: 768px) {
+    letter-spacing: 8px;
+  }
   color: var(--color-grey-500);
   ${(props) =>
     props.dorata &&
@@ -58,8 +63,11 @@ const StyledH2o = styled.h2`
   ${(props) =>
     props.isOpen &&
     css`
+      transform: scale(1.1);
       color: var(--color-gold);
-      /* text-shadow: 0 0 8px var(--color-gold); */
+      @media only screen and (min-width: 768px) {
+        transform: none;
+      }
     `}
 `;
 

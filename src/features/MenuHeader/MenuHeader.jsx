@@ -84,14 +84,12 @@ function MenuHeader({ open, onOpen }) {
           </NavLink>
         </li>
         <li>
-          <NavLink to="contatti" onClick={onOpen}>
-            Contatti
+          <NavLink to="/prenota" onClick={onOpen}>
+            prenota
           </NavLink>
         </li>
         <li>
-          <NavLink to="/prenota" onClick={onOpen}>
-            Prenota
-          </NavLink>
+          <a href="mailto:hairludwig02@gmail.com">Lavora con noi</a>
         </li>
       </Lista>
     </StyledMenu>

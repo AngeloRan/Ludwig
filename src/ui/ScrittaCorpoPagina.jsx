@@ -4,6 +4,11 @@ import styled, { css } from "styled-components";
 const StyledScrittaCorpoPagina = styled.div`
   opacity: 0;
   transform: translateX(-60%);
+  ${(props) =>
+    props.type === "noview" &&
+    css`
+      transform: translateX(0);
+    `}
   transition: all 1.2s;
   text-align: center;
   & p {
@@ -18,13 +23,16 @@ const StyledScrittaCorpoPagina = styled.div`
       transform: translateX(0);
     `}
 
-  padding: 5rem 3rem 0 3rem;
+  padding: 4rem 3rem 0 3rem;
+  margin-top: 1rem;
 
   ${(props) =>
     props.type === "servizi" &&
     css`
       @media only screen and (min-width: 768px) {
+        line-height: 30px;
         padding-top: 0px;
+        margin-top: 0;
       }
     `}
 

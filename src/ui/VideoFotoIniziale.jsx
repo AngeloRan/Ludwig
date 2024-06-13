@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import styled from "styled-components";
 
 const ContainerVideo = styled.div`
@@ -49,16 +50,43 @@ const Foto = styled.img`
 `;
 
 function VideoFotoIniziale({ children, ...props }) {
+  useEffect(() => {
+    const videoElement = document.querySelector(".videos");
+    if (videoElement) {
+      videoElement.addEventListener("loadeddata", () => {
+        console.log("Video caricato correttamente");
+        videoElement.muted = true; // Assicurati che il video sia silenziato
+        videoElement.play().catch((error) => {
+          console.error("Errore nella riproduzione del video:", error);
+        });
+      });
+    }
+  }, []);
+
   return (
     <ContainerVideo>
       {props.tipo === "video" && (
-        <Video {...props}>
+        <Video autoPlay loop muted playsInline>
           <source src={props.src} type={props.type} />
           Your browser is not supported
         </Video>
       )}
       {props.tipo === "foto" && <Foto src={props.src}></Foto>}
     </ContainerVideo>
+    //   <ContainerVideo
+    //     dangerouslySetInnerHTML={{
+    //       __html: `
+    //       <video
+    //         class="videos"
+    //         loop
+    //         muted
+    //         autoplay
+    // playsinline
+    //       >
+    //       <source src="${props.src}" type="video/mp4" />
+    //       </video>`,
+    //     }}
+    //   />
   );
 }
 

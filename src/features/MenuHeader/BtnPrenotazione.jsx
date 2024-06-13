@@ -90,7 +90,7 @@ function BtnPrenotazione({ head, open, type }) {
     window.addEventListener("resize", handleResize);
 
     return window.removeEventListener("resize", handleResize);
-  }, [setLarghezza]);
+  }, []);
 
   return (
     <StyledBtnPrenotazione head={head} open={open} type={type}>

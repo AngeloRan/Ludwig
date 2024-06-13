@@ -256,6 +256,25 @@ img {
   border-left: 5px solid var(--color-gold);
 }
 
+.videos {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  opacity: 0;
+  animation-name: Show-video;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  @keyframes Show-video {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}
 
 
 `;

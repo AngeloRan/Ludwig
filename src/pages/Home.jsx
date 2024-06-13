@@ -41,14 +41,7 @@ const ContainerSlide = styled.div`
 function Home() {
   return (
     <>
-      <VideoFotoIniziale
-        tipo="video"
-        autoPlay
-        muted
-        loop
-        src="/barbiere.mp4"
-        type="video/mp4"
-      />
+      <VideoFotoIniziale tipo="video" src="/barbiere.mp4" type="video/mp4" />
 
       <ContainerHome>
         <Presentazione type="iniziale" />
