@@ -41,11 +41,7 @@ const StyledSliderFoto = styled.div`
 `;
 
 function SliderFoto() {
-  const fotos = [
-    "./public/img/foto_1.PNG",
-    "./public/img/foto_2.PNG",
-    "./public/img/foto_3.PNG",
-  ];
+  const fotos = ["./img/foto_1.PNG", "./img/foto_2.PNG", "./img/foto_3.PNG"];
 
   const { ref, inView } = useInView({
     triggerOnce: true,

@@ -98,10 +98,10 @@ const FotoImg = styled.img`
 
 export const GalleriaContext = createContext({});
 const fotogalleria = [
-  "./public/img/foto_1.PNG",
-  "./public/img/foto_2.PNG",
-  "./public/img/foto_3.PNG",
-  "./public/img/foto_4.PNG",
+  "./img/foto_1.PNG",
+  "./img/foto_2.PNG",
+  "./img/foto_3.PNG",
+  "./img/foto_4.PNG",
 ];
 
 function Galleria() {

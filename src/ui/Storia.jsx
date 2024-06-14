@@ -237,7 +237,7 @@ const IMG = styled.img`
 
 // PER MOBILE
 const ContainerTuttoMobile = styled.div`
-  width: 100dvw;
+  width: 100%;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -247,7 +247,7 @@ const ContainerTuttoMobile = styled.div`
 
 const FotoMobile = styled.img`
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
   object-fit: cover;
 `;
 const ScrittaMobile = styled.p`
@@ -274,8 +274,6 @@ function Storia() {
   const [screen, setScreen] = useState(() =>
     window.innerWidth > 768 ? "large" : "small"
   );
-
-
 
   useEffect(() => {
     const calculateDivTop = () => {
