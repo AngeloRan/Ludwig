@@ -106,7 +106,7 @@ function VideoFotoIniziale({ children, ...props }) {
           <source src={loadedSrc} type={props.type} />
           Your browser is not supported
         </Video>
-      ) : props.tipo === "video" ? (
+      ) : props.tipo === "video" && !isLoaded ? (
         <Spinner />
       ) : null}
       {props.tipo === "foto" && <Foto src={props.src}></Foto>}
