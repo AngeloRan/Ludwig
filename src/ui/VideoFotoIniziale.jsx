@@ -92,12 +92,15 @@ function VideoFotoIniziale({ children, ...props }) {
   useEffect(() => {
     const videoElement = videoRef?.current;
     if (videoElement) {
-      videoElement.addEventListener("canplaythrough", (e) => {
+      videoElement.addEventListener("loadeddata", (e) => {
         console.log("Video caricato correttamente");
         videoElement.muted = true; // Assicurati che il video sia silenziato
-        videoElement.play().catch((error) => {
-          console.error("Errore nella riproduzione del video:", error);
-        });
+        videoElement
+          .play()
+          .then(console.log("partito"))
+          .catch((error) => {
+            console.error("Errore nella riproduzione del video:", error);
+          });
         setIsLoaded(true);
       });
     }
