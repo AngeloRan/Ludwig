@@ -46,14 +46,14 @@ function Home() {
       <ContainerHome>
         <Presentazione type="iniziale" />
         <MenuPagina />
-        <Presentazione type="inframmezzo" author="Eiselle">
+        {/* <Presentazione type="inframmezzo" author="Eiselle">
           {" "}
           "Per trovare il tuo look, la sperimentazione è sempre cosa buona e
           giusta: capelli lunghi, corti, lisci, ricci, morbidi o naturali, alla
           Monna Lisa, punk, spettinati, acconciati ad arte, non importa. Quello
           che importa è che sia siano sani, perché coi capelli sani puoi fare
           ciò che vuoi."
-        </Presentazione>
+        </Presentazione> */}
       </ContainerHome>
 
       <ContainerSlide>

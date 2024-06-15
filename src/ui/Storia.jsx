@@ -242,12 +242,12 @@ const ContainerTuttoMobile = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10vh;
+  gap: 5vh;
 `;
 
 const FotoMobile = styled.img`
   width: 100%;
-  /* height: 100%; */
+  height: 100%;
   object-fit: cover;
 `;
 const ScrittaMobile = styled.p`
@@ -261,6 +261,18 @@ const ScrittaMobile = styled.p`
   text-align: center;
   line-height: 30px;
   color: var(--color-grey-500);
+`;
+
+const ContainerAlignFotoMobile = styled.div`
+  display: flex;
+  gap: 1.5rem;
+  padding: 0 1rem;
+`;
+const PictureMobile = styled.div`
+  width: 100%;
+  height: 30vh;
+  overflow: hidden;
+  border-radius: 5px;
 `;
 
 function Storia() {
@@ -369,26 +381,32 @@ function Storia() {
           <ScrittaCorpoPagina type="storia">
             <H2 type="storia">Come ci siamo arrivati...</H2>
           </ScrittaCorpoPagina>
-          <ContainerFotoMobile>
-            <FotoMobile src="/img/2001.jpeg"></FotoMobile>
-            <ScrittaMobile>
-              <span>2001</span> Ludwig nasce dal sogno della fondatrice Daniela,
-              che dopo anni di esperienza in una grossa compagnia del settore,
-              decise di creare il proprio salone. Un luogo in cui, insieme al
-              suo team, accogliere ed esprimere il proprio amore verso i
-              capelli, facendo sentire a casa ogni cliente.
-            </ScrittaMobile>
-          </ContainerFotoMobile>
-          <ContainerFotoMobile>
-            <FotoMobile src="/img/2001.jpeg"></FotoMobile>
-            <ScrittaMobile>
-              <span>2024</span> Dopo 23 anni, e con l’ingresso dei figli
-              nell’attività, Ludwig decide di rinnovare per offrire un servizio
-              ancora più esclusivo e di alta qualità. Per incantare chiunque
-              varchi la soglia e consolidarsi punto di riferimento per tutti
-              coloro che amano la bellezza dei propri capelli.
-            </ScrittaMobile>
-          </ContainerFotoMobile>
+          <ContainerAlignFotoMobile>
+            <ContainerFotoMobile nofade={true}>
+              <PictureMobile>
+                <FotoMobile src="/img/2001.jpeg" />
+              </PictureMobile>
+              <ScrittaMobile>
+                <span>2001</span> Ludwig nasce dal sogno della fondatrice
+                Daniela, che dopo anni di esperienza in una grossa compagnia del
+                settore, decise di creare il proprio salone. Un luogo in cui,
+                insieme al suo team, accogliere ed esprimere il proprio amore
+                verso i capelli, facendo sentire a casa ogni cliente.
+              </ScrittaMobile>
+            </ContainerFotoMobile>
+            <ContainerFotoMobile>
+              <PictureMobile>
+                <FotoMobile src="/img/2001.jpeg" />
+              </PictureMobile>
+              <ScrittaMobile>
+                <span>2024</span> Dopo 23 anni, e con l’ingresso dei figli
+                nell’attività, Ludwig decide di rinnovare per offrire un
+                servizio ancora più esclusivo e di alta qualità. Per incantare
+                chiunque varchi la soglia e consolidarsi punto di riferimento
+                per tutti coloro che amano la bellezza dei propri capelli.
+              </ScrittaMobile>
+            </ContainerFotoMobile>
+          </ContainerAlignFotoMobile>
         </ContainerTuttoMobile>
       )}
     </>

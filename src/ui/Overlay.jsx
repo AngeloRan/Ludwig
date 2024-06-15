@@ -39,6 +39,7 @@ const ImgOverlay = styled.img`
   display: block;
   height: 100%;
   margin: auto;
+  object-fit: contain;
   border-radius: 5px;
   transition: all 1s;
   transform: scale(0);
