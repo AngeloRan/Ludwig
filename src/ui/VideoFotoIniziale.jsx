@@ -1,5 +1,6 @@
-import { useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
+import Spinner from "./Spinner";
 
 const ContainerVideo = styled.div`
   height: 70vh;
@@ -50,27 +51,64 @@ const Foto = styled.img`
 `;
 
 function VideoFotoIniziale({ children, ...props }) {
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [loadedSrc, setLoadedSrc] = useState(null);
+  const videoRef = useRef();
+
+  function preloadVideo(src) {
+    return new Promise((resolve, reject) => {
+      const video = document.createElement("video");
+      video.oncanplaythrough = () => resolve();
+      video.onerror = () => reject();
+      video.src = src;
+    });
+  }
+
   useEffect(() => {
-    const videoElement = document.querySelector(".videos");
-    if (videoElement) {
-      videoElement.addEventListener("loadeddata", () => {
-        console.log("Video caricato correttamente");
-        videoElement.muted = true; // Assicurati che il video sia silenziato
-        videoElement.play().catch((error) => {
-          console.error("Errore nella riproduzione del video:", error);
-        });
+    let isMounted = true;
+
+    preloadVideo(props.src)
+      .then(() => {
+        if (isMounted) {
+          setLoadedSrc(props.src);
+          setIsLoaded(true);
+        }
+      })
+      .catch((error) => {
+        console.error("Error loading video", error);
       });
-    }
-  }, []);
+
+    // Cleanup flag on component unmount
+    return () => {
+      isMounted = false;
+    };
+  }, [props.src]);
+  // const [isLoaded, setIsLoaded] = useState(false);
+
+  // useEffect(() => {
+  //   const videoElement = videoRef?.current;
+  //   if (videoElement) {
+  //     videoElement.addEventListener("loadeddata", (e) => {
+  //       // setIsLoaded(true);
+  //       console.log("Video caricato correttamente");
+  //       videoElement.muted = true; // Assicurati che il video sia silenziato
+  //       videoElement.play().catch((error) => {
+  //         console.error("Errore nella riproduzione del video:", error);
+  //       });
+  //     });
+  //   }
+  // }, []);
 
   return (
     <ContainerVideo>
-      {props.tipo === "video" && (
-        <Video autoPlay loop muted playsInline>
-          <source src={props.src} type={props.type} />
+      {props.tipo === "video" && isLoaded ? (
+        <Video ref={videoRef} autoPlay loop muted playsInline>
+          <source src={loadedSrc} type={props.type} />
           Your browser is not supported
         </Video>
-      )}
+      ) : props.tipo === "video" && !isLoaded ? (
+        <Spinner />
+      ) : null}
       {props.tipo === "foto" && <Foto src={props.src}></Foto>}
     </ContainerVideo>
     //   <ContainerVideo

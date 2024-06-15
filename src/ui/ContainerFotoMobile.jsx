@@ -2,6 +2,7 @@ import { useInView } from "react-intersection-observer";
 import styled, { css } from "styled-components";
 
 const StyledContainerFotoMobile = styled.div`
+  /* height: auto; */
   width: 100%;
   transition: all 1.5s ease;
   transform: translateX(80%);
@@ -19,7 +20,7 @@ const StyledContainerFotoMobile = styled.div`
 function ContainerFotoMobile({ children }) {
   const { ref, inView } = useInView({
     triggerOnce: true,
-    rootMargin: `-500px 0px`,
+    rootMargin: `-0px 0px`,
   });
   return (
     <StyledContainerFotoMobile ref={ref} inView={inView}>
