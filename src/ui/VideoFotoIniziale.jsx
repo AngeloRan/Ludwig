@@ -56,8 +56,8 @@ const Foto = styled.img`
 
 function VideoFotoIniziale({ children, ...props }) {
   const [isLoaded, setIsLoaded] = useState(false);
-  // const [loadedSrc, setLoadedSrc] = useState(null);
-  const videoRef = useRef();
+  console.log(isLoaded);
+  const videoFotoRef = useRef();
 
   // function preloadVideo(src) {
   //   return new Promise((resolve, reject) => {
@@ -90,17 +90,23 @@ function VideoFotoIniziale({ children, ...props }) {
   // const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
-    const videoElement = videoRef?.current;
-    if (videoElement) {
-      videoElement.addEventListener("loadeddata", (e) => {
-        console.log("Video caricato correttamente");
-        videoElement.muted = true; // Assicurati che il video sia silenziato
-        videoElement
+    const videoFotoElement = videoFotoRef?.current;
+
+    if (!videoFotoElement) return;
+
+    if (videoFotoElement.hasAttribute("loop")) {
+      videoFotoElement.addEventListener("loadeddata", (e) => {
+        videoFotoElement.muted = true; // Assicurati che il video sia silenziato
+        videoFotoElement
           .play()
           .then(console.log("partito"))
           .catch((error) => {
             console.error("Errore nella riproduzione del video:", error);
           });
+        setIsLoaded(true);
+      });
+    } else {
+      videoFotoElement.addEventListener("load", (e) => {
         setIsLoaded(true);
       });
     }
@@ -109,12 +115,21 @@ function VideoFotoIniziale({ children, ...props }) {
   return (
     <ContainerVideo>
       {props.tipo === "video" && (
-        <Video loaded={isLoaded} ref={videoRef} autoPlay loop muted playsInline>
+        <Video
+          loaded={isLoaded}
+          ref={videoFotoRef}
+          autoPlay
+          loop
+          muted
+          playsInline
+        >
           <source src={props.src} type={props.type} />
           Your browser is not supported
         </Video>
       )}
-      {props.tipo === "foto" && <Foto src={props.src}></Foto>}
+      {props.tipo === "foto" && (
+        <Foto ref={videoFotoRef} src={props.src}></Foto>
+      )}
     </ContainerVideo>
     //   <ContainerVideo
     //     dangerouslySetInnerHTML={{
