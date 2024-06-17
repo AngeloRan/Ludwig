@@ -110,7 +110,7 @@ function Menuservizi() {
       },
       {
         titolo: "Partial Golden Aura",
-        prezzo: "da 65",
+        prezzo: "da 65 ",
         descrizione:
           "Cosa cambia da quello precedente? La quantità di schiaritura è concentrata sulla sommità, ideale come mantenimento dopo 8/10 settimane aver fatto il servizio Golden Aura.",
       },
