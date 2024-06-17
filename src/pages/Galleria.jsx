@@ -4,6 +4,7 @@ import Overlay from "../ui/Overlay";
 import { createContext, useState } from "react";
 import H2 from "../ui/H2";
 import VideoFotoIniziale from "../ui/VideoFotoIniziale";
+import Prova from "../features/SliderFoto/Prova";
 
 const StyledGalleria = styled.div`
   background-image: linear-gradient(
@@ -149,6 +150,7 @@ function Galleria() {
 
         <Footer page="menuservizi" type="galleria" />
       </GalleriaContext.Provider>
+      {/* <Prova></Prova> */}
     </StyledGalleria>
   );
 }
