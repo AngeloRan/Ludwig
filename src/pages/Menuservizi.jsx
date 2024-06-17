@@ -62,7 +62,7 @@ function Menuservizi() {
         titolo: "Taglio sartoriale e piega",
         prezzo: "47",
         descrizione:
-          "Presso il nostro salone, offriamo un servizio di taglio sartoriale, è un'esperienza personalizzata che prende in considerazione la morfologia del viso, la texture dei capelli e le abitudini quotidiane di ogni cliente. I nostri esperti collaborano attentamente con te per comprendere le tue esigenze e offrirti consigli mirati in base alla consulenza. Il risultato finale è un taglio che mette in risalto la tua bellezza naturale e che riflette la tua individualità.",
+          "Presso il nostro salone, offriamo un servizio di taglio sartoriale. È un'esperienza personalizzata che prende in considerazione la morfologia del viso, la texture dei capelli e le abitudini quotidiane di ogni cliente. I nostri esperti collaborano attentamente con te per comprendere le tue esigenze e offrirti consigli mirati in base alla consulenza. Il risultato finale è un taglio che mette in risalto la tua bellezza naturale e che riflette la tua individualità.",
       },
       {
         titolo: "Piega",
@@ -74,7 +74,7 @@ function Menuservizi() {
         titolo: "Rifinitura doppie punte ",
         prezzo: "18",
         descrizione:
-          "Taglio eseguito su capelli asciutti dopo una schiaritura per andare a definire gli ultimi centimetri della lunghezza, la famosa spuntatina.",
+          "Taglio eseguito su capelli asciutti esclusivamente dopo una schiaritura, per andare a definire gli ultimi centimetri della lunghezza, la famosa spuntatina.",
       },
       {
         titolo: "Taglio maschile",
@@ -94,19 +94,19 @@ function Menuservizi() {
         titolo: "All over color",
         prezzo: "da 40",
         descrizione:
-          "Un colore personalizzato in base alla consulenza del tuo tecnico, eseguito solitamente per coprire i capelli bianchi ogni  3/4 settimane",
+          "Un colore personalizzato in base alla consulenza del tuo tecnico, eseguito solitamente per coprire i capelli bianchi ogni  3/4 settimane.",
       },
       {
         titolo: "Glaze",
         prezzo: "da 20",
         descrizione:
-          "Enfatizza o modifica la tonalità dei tuoi capelli, sempre eseguito dopo le schiariture per dare una tonalità unica.È un ottimo mantenimento fra una sessione di colore e l’altra",
+          "Enfatizza o modifica la tonalità dei tuoi capelli. Viene sempre eseguito dopo le schiariture per dare una tonalità unica. È un ottimo mantenimento fra una sessione di colore e l’altra.",
       },
       {
         titolo: "Golden Aura",
         prezzo: "da 85",
         descrizione:
-          "E' un servizio di schiariture che parte dalle radici, perfetto per chi vuole vedersi molto chiara su tutti i capelli, anche sulla base, dando tridimensionalità al suo colore naturale)",
+          "E' un servizio di schiariture che parte dalle radici, perfetto per chi vuole vedersi molto chiara su tutti i capelli, anche sulla base, dando tridimensionalità al suo colore naturale.",
       },
       {
         titolo: "Partial Golden Aura",
@@ -118,25 +118,25 @@ function Menuservizi() {
         titolo: "Total Bleached",
         prezzo: "da 95",
         descrizione:
-          "Se cerchi un cambio look di grande personalità e vuoi schiarire completamente tutti i tuoi capelli dalla radice alle punte, questo è il servizio che fa per te",
+          "Se cerchi un cambio look di grande personalità e vuoi schiarire completamente tutti i tuoi capelli dalla radice alle punte, questo è il servizio che fa per te.",
       },
       {
         titolo: "Full blending",
         prezzo: "da 85",
         descrizione:
-          "Il Full Blending è come dipingere delicatamente i tuoi capelli con un effetto di scrittura naturale e graduale , Con questa tecnica il capello viene schiarito creando un effetto luminoso e multidimensionale, con sfumature che si fondono armoniosamente con il tuo colore naturale dei capelli. È perfetto per aggiungere movimento e luminosità alla tua chioma.Per un look a prova di Pinterest!",
+          "Il Full Blending dipinge delicatamente i tuoi capelli con un effetto di schiaritura naturale e graduale. Con questa tecnica il capello viene schiarito creando un effetto luminoso e multidimensionale, con sfumature che si fondono armoniosamente con il tuo colore naturale dei capelli. È perfetto per aggiungere movimento e luminosità alla tua chioma. Per un look a prova di Pinterest!",
       },
       {
         titolo: "Soft  blending",
         prezzo: "da 65",
         descrizione:
-          "Cosa cambia dal full? La quantità di capelli schiarita è minore, per dare movimento alle lunghezze ma con un effetto ancora più  naturale, come se fossero schiariti dal sole. Mantenimento medio-basso",
+          "Cosa cambia dal full? La quantità di capelli schiarita è minore, per dare movimento alle lunghezze, ma con un effetto ancora più naturale come se fossero schiariti dal sole. Mantenimento medio-basso.",
       },
       {
         titolo: "SHADOWING",
         prezzo: "da 75",
         descrizione:
-          "Lo Shadowing è come dare ai tuoi capelli un makeover in 3D! Utilizziamo diverse tonalità di colore per creare ombre e luci che accentuano le caratteristiche del tuo viso e dei tuoi capelli, aggiungendo profondità e dimensione. È come scolpire i tuoi capelli per valorizzare al meglio la tua bellezza naturale.  ",
+          "Lo Shadowing da ai tuoi capelli un makeover in 3D! Utilizziamo diverse tonalità di colore per creare ombre e luci che accentuano le caratteristiche del tuo viso e dei tuoi capelli, aggiungendo profondità e dimensione. È come scolpire i tuoi capelli per valorizzare al meglio la tua bellezza naturale.",
       },
     ],
     technical: [
@@ -144,31 +144,30 @@ function Menuservizi() {
         titolo: "A CURL CAN DREAM",
         prezzo: "da 60",
         descrizione:
-          "Esalta la bellezza naturale dei tuoi capelli con il nostro servizio di ondulazione professionale. Grazie alla nostra esperienza e alle tecniche all'avanguardia, creiamo onde morbide o ricci definiti che si adattano perfettamente alla tua personalità e al tuo stile di vita. Con un'attenzione meticolosa ai dettagli e l'uso di prodotti di altissima qualità, garantiamo risultati duraturi e impeccabili. Affidati al nostro team di professionisti per ottenere un’ondulazione che aggiunga volume, movimento o un tocco di glamour alla tua chioma, per un look che ti farà sentire unica in ogni occasione.",
+          "Esalta la bellezza naturale dei tuoi capelli con il nostro servizio di ondulazione professionale. Grazie alla nostra esperienza e alle tecniche all'avanguardia, creiamo onde morbide o ricci definiti che si adattano perfettamente alla tua personalità e al tuo stile di vita. Con un'attenzione meticolosa ai dettagli e l'uso di prodotti di altissima qualità, garantiamo risultati duraturi ed impeccabili. Affidati al nostro team di professionisti per ottenere un’ondulazione che aggiunga volume, movimento o un tocco di glamour alla tua chioma, per un look che ti farà sentire unica in ogni occasione.",
       },
       {
         titolo: "LUXE SMOOTHING",
         prezzo: "da 200",
-        descrizione:
-          "Sogni i tuoi capelli lisci e impeccabili? Il nostro servizio di trattamento alla keratina è la risposta ai tuoi desideri. trasforma i capelli ribelli e crespi in una morbida seta, la nostra formula innovativa a base di keratina doma i ricci più indomabili ed elimina il crespo senza compromettere la vitalità dei tuoi capelli. Dimentica le lunghe ore trascorse a lisciare la tua chioma ogni mattina e goditi la libertà di capelli perfettamente lisci, fluidi e lucenti, grazie al nostro trattamento alla keratina. Abbraccia la bellezza senza sforzo e la praticità di una chioma impeccabile in ogni situazione.Durata fino a cinque mesi. Mantenimento semplice at home con 2 prodotti.",
+        descrizione: `Sogni i tuoi capelli lisci e impeccabili? Il nostro servizio di trattamento alla keratina è la risposta ai tuoi desideri. Trasforma i capelli ribelli e crespi in una morbida seta, la nostra formula innovativa a base di keratina doma i ricci più indomabili ed elimina il crespo senza compromettere la vitalità dei tuoi capelli. Dimentica le lunghe ore trascorse a lisciare la tua chioma ogni mattina e goditi la libertà di capelli perfettamente lisci, fluidi e lucenti. Abbraccia la bellezza senza sforzo e la praticità di una chioma impeccabile in ogni situazione.  Durata fino a cinque mesi. Mantenimento semplice at home con 2 prodotti.`,
       },
       {
         titolo: "WHY BE FRIZZ",
         prezzo: "da 100",
         descrizione:
-          "Goditi una chioma dall'aspetto naturale e senza crespo con il nostro trattamento ANTIFRIZZ personalizzato. Con la nostra formula speciale, idratiamo e eliminiamo il crespo dai tuoi capelli mentre preserviamo il loro naturale movimento. Il risultato? Capelli lussuosi, morbidi e gestibili, con la tua ondulazione, che aggiunge movimento e vitalità al tuo look per riflettere la tua bellezza in ogni occasione.",
+          "Goditi una chioma dall'aspetto naturale e senza crespo con il nostro trattamento ANTIFRIZZ personalizzato. Con la nostra formula speciale, idratiamo ed eliminiamo il crespo dai tuoi capelli mentre preserviamo il loro naturale movimento. Il risultato? Capelli lussuosi, morbidi e gestibili, con la tua ondulazione, che aggiunge movimento e vitalità al tuo look per riflettere la tua bellezza in ogni occasione.",
       },
       {
         titolo: "Extentions",
         prezzo: "da convenire",
         descrizione:
-          "Esaudisci il tuo sogno di una chioma lunga e lussuosa con il nostro servizio di extension. Con l'utilizzo di extension di altissima qualità e la nostra competenza nell'applicazione, trasformiamo istantaneamente la tua chioma, aggiungendo lunghezza, volume e spessore su misura per te. Che tu desideri un look pieno di volume o un tocco di lunghezza e definizione, il nostro team di esperti ti offre soluzioni personalizzate per ottenere un risultato impeccabile e naturale. Sogna in grande e scopri il potere strabiliante delle extension, per una chioma che ti farà sentire a tuo agio in ogni occasione.",
+          "Esaudisci il tuo sogno di capelli lunghi e lussuosi con il nostro servizio di extension. Con l'utilizzo di extension di altissima qualità e la nostra competenza nell'applicazione, trasformiamo istantaneamente la tua chioma, aggiungendo lunghezza, volume e spessore su misura per te. Che tu desideri un look pieno di volume o un tocco di lunghezza e definizione, il nostro team di esperti ti offre soluzioni personalizzate per ottenere un risultato impeccabile e naturale. Sogna in grande e scopri il potere strabiliante delle extension, per una chioma che ti farà sentire a tuo agio in ogni occasione.",
       },
       {
         titolo: "Color correction",
         prezzo: "da convenire",
         descrizione:
-          "Con correzione colore intendiamo un servizio in cui dobbiamo rimuovere un colore fatto in precedenza o sistemare un lavoro sbagliato fatto in casa o in salone.La correzione comporta un lavoro complesso e delicato, in base allo stato di salute del capello ci potrebbero volere più sedute per arrivare al risultato finale desiderato.Preservare la qualità del capello è la nostra priorità. Questo servizio richiede una consulenza in salone e un test prova del capello prima della prenotazione.",
+          "Con correzione colore intendiamo un servizio in cui dobbiamo rimuovere un colore fatto in precedenza o sistemare un lavoro sbagliato fatto in casa o in salone. La correzione comporta un lavoro complesso e delicato, in base allo stato di salute del capello ci potrebbero volere più sedute per arrivare al risultato finale desiderato. Preservare la qualità del capello è la nostra priorità. Questo servizio richiede una consulenza in salone e un test prova del capello prima della prenotazione.",
       },
     ],
     ludwigRituals: [
@@ -182,13 +181,13 @@ function Menuservizi() {
         titolo: "Intense ritual",
         prezzo: "25-30",
         descrizione:
-          "I nostri Intense ritual offrono una soluzione a qualsiasi necessità, hanno una efficacia maggiore e più duratura nel tempo. Sono tutti enfatizzati da una nuovissima tecnologia di nebulizzazione che ti spiegheranno i nostri esperti in salone.",
+          "I nostri Intense ritual offrono una soluzione a qualsiasi necessità. Hanno un’efficacia maggiore e più duratura nel tempo. Sono tutti enfatizzati da una nuovissima tecnologia di nebulizzazione che ti spiegheranno i nostri esperti in salone.",
       },
       {
-        titolo: "Reborn ritual (o First class ritual)",
+        titolo: "First class ritual",
         prezzo: "50",
         descrizione:
-          "I nostri First class ritual offrono un viaggio indulgente verso la perfezione dei capelli. Formulato con ingredienti selezionati e tecnologie innovative, questo trattamenti trasformano istantaneamente i capelli opachi, danneggiati, assottigliati e privi di vitalità in una chioma radiosa, setosa e voluminosa. I capelli vengtamento è pensato per coccolare i capelli e il cuoio capelluto, offrendo un momento di puro benessere e relax. Lasciati avvolgere dall'aura di prestigio e bellezza, e regala ai tuoi capelli l'attenzione e la cura che meritano con i nostri trattamenti FIRST CLASS",
+          "I nostri First class ritual offrono un viaggio indulgente verso la perfezione dei capelli. Formulato con ingredienti selezionati e tecnologie innovative, questi trattamenti trasformano istantaneamente i capelli opachi, danneggiati, assottigliati e privi di vitalità in una chioma radiosa, setosa e voluminosa. I capelli vengono rigenerati in profondità, riparando danni e ripristinando la loro naturale lucentezza. Ogni passaggio del trattamento è pensato per coccolare i capelli e il cuoio capelluto, offrendo un momento di puro benessere e relax. Lasciati avvolgere dall'aura di prestigio e bellezza, e regala ai tuoi capelli l'attenzione e la cura che si meritano con i nostri trattamenti FIRST CLASS.",
       },
     ],
   };

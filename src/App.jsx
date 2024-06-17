@@ -4,11 +4,12 @@ import AppLayout from "./ui/AppLayout";
 
 import { Suspense, lazy } from "react";
 import Spinner from "./ui/Spinner";
+import PageNotFound from "./pages/PageNotFound";
 
 const Home = lazy(() => import("./pages/Home"));
 const Menuservizi = lazy(() => import("./pages/Menuservizi"));
 const Galleria = lazy(() => import("./pages/Galleria"));
-const Contatti = lazy(() => import("./pages/Prenota"));
+// const Contatti = lazy(() => import("./pages/Prenota"));
 const Prenota = lazy(() => import("./pages/Prenota"));
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
               <Route path="galleria" element={<Galleria />} />
               <Route path="prenota" element={<Prenota />} />
             </Route>
+            <Route path="*" element={<PageNotFound />} />
           </Routes>
         </Suspense>
       </BrowserRouter>

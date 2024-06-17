@@ -1,5 +1,4 @@
 import styled, { css } from "styled-components";
-import Lettera from "../../ui/Lettera";
 import RowMenuPagina from "./RowMenuPagina";
 import { useInView } from "react-intersection-observer";
 
@@ -59,7 +58,7 @@ function MenuPagina() {
         Galleria
       </RowMenuPagina>
       <RowMenuPagina
-        to="/contatti"
+        to="/prenota"
         p="Ci sono mille motivi per rimanere in contatto: segui le nostre attività sui social, rimani aggiornato su tutte le novità"
       >
         Contatti
