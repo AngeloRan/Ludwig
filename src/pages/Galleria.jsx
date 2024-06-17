@@ -98,12 +98,10 @@ const FotoImg = styled.img`
 `;
 
 export const GalleriaContext = createContext({});
-const fotogalleria = [
-  "./img/foto_1.PNG",
-  "./img/foto_2.PNG",
-  "./img/foto_3.PNG",
-  "./img/foto_4.PNG",
-];
+const fotogalleria = Array.from(
+  { length: 11 },
+  (foto, i) => `./img/foto_${i + 1}.PNG`
+);
 
 function Galleria() {
   const [isFotoOpen, setIsFotoOpen] = useState(false);

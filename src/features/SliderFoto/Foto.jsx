@@ -36,7 +36,7 @@ const StyledFoto = styled.div`
 function Foto({ fot, id, currentSlide, ritornoacapo }) {
   return (
     <StyledFoto id={id} cur={currentSlide} ritornoacapo={ritornoacapo}>
-      <img src={fot} alt="ciao" loading="lazy" />
+      <img src={fot} alt="foto" loading="lazy" />
     </StyledFoto>
   );
 }

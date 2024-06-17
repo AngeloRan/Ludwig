@@ -40,9 +40,20 @@ const StyledSliderFoto = styled.div`
   }
 `;
 
-function SliderFoto() {
-  const fotos = ["./img/foto_1.PNG", "./img/foto_2.PNG", "./img/foto_3.PNG"];
+const fotos = [];
 
+// let fotos = [
+//   `./img/foto_${Math.floor(Math.random() * 11) + 1}.PNG`,
+//   `./img/foto_${Math.floor(Math.random() * 11) + 1}.PNG`,
+//   `./img/foto_${Math.floor(Math.random() * 11) + 1}.PNG`,
+// ];
+
+while (fotos.length < 3) {
+  let img = `./img/foto_${Math.floor(Math.random() * 11) + 1}.PNG`;
+  !fotos.includes(img) && fotos.push(img);
+}
+
+function SliderFoto() {
   const { ref, inView } = useInView({
     triggerOnce: true,
     rootMargin: `100px 0px`,
