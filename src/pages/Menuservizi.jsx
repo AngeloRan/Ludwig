@@ -58,7 +58,7 @@ const StyledFaWhatsapp = styled(LiaWhatsapp)`
 const PIdisclaimer = styled.p`
   font-size: 1.1rem;
   text-align: left;
-  color: var(--color-grey-400);
+  color: var(--color-grey-500);
   transition: all 0.2s;
   @media only screen and (min-width: 768px) {
     font-size: 1.3rem;
