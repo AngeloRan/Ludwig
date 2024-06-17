@@ -55,6 +55,19 @@ const StyledFaWhatsapp = styled(LiaWhatsapp)`
   }
 `;
 
+const PIdisclaimer = styled.p`
+  font-size: 1.1rem;
+  text-align: left;
+  color: var(--color-grey-400);
+  transition: all 0.2s;
+  @media only screen and (min-width: 768px) {
+    font-size: 1.3rem;
+  }
+  &:hover {
+    color: var(--color-grey-500);
+  }
+`;
+
 function Menuservizi() {
   const servizi = {
     styling: [
@@ -110,7 +123,7 @@ function Menuservizi() {
       },
       {
         titolo: "Partial Golden Aura",
-        prezzo: "da 65",
+        prezzo: "da 65 ",
         descrizione:
           "Cosa cambia da quello precedente? La quantità di schiaritura è concentrata sulla sommità, ideale come mantenimento dopo 8/10 settimane aver fatto il servizio Golden Aura.",
       },
@@ -179,7 +192,7 @@ function Menuservizi() {
       },
       {
         titolo: "Intense ritual",
-        prezzo: "25-30",
+        prezzo: "26",
         descrizione:
           "I nostri Intense ritual offrono una soluzione a qualsiasi necessità. Hanno un’efficacia maggiore e più duratura nel tempo. Sono tutti enfatizzati da una nuovissima tecnologia di nebulizzazione che ti spiegheranno i nostri esperti in salone.",
       },
@@ -227,7 +240,15 @@ function Menuservizi() {
               </a>
             </p>
           </PI>
-
+          <PSeparatore />
+          <ScrittaCorpoPagina>
+            <PIdisclaimer>
+              * tutti i prezzi indicati sono già comprensivi di shampoo,
+              conditioner e rifinitura adatti alla tipologia di capello. <br />{" "}
+              ** I prezzi possono variare a seconda della lunghezza e densità
+              dei capelli.
+            </PIdisclaimer>
+          </ScrittaCorpoPagina>
           <PSeparatore />
         </ScrittaCorpoPagina>
       </ContainerMenuservizi>
@@ -242,6 +263,7 @@ function Menuservizi() {
               </ContainerRowMenuServizi.H2o>
               <ToggleArrowMenuServizi />
             </ScrittaCorpoPagina>
+
             <PSeparatore type="gold" />
           </ContainerMenuservizi>
 
