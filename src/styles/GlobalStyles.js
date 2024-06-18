@@ -25,6 +25,8 @@ const GlobalStyles = createGlobalStyle`
   --color-gold-light: #F1e5ac;
   --color-gold-lighter: #FFF8DC;
 
+  --small: 768px;
+
 }
 
 
