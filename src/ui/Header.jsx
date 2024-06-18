@@ -16,6 +16,7 @@ const StyledHeader = styled.header`
   /* transition: all 0.6s cubic-bezier(0.1, 0.5, 0.5, 1.5); */
   transition: all 0.5s ease;
   overflow: hidden;
+  backdrop-filter: blur(1px);
 
   @media only screen and (min-width: 768px) {
     height: 100vh;
