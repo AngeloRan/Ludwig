@@ -2,9 +2,9 @@ import styled, { css } from "styled-components";
 import Presentazione from "../ui/Presentazione";
 import MenuPagina from "../features/MenuPagina/MenuPagina";
 import SliderFoto from "../features/SliderFoto/SliderFoto";
-import H2 from "../ui/H2";
+// import H2 from "../ui/H2";
 import Storia from "../ui/Storia";
-import ScrittaCorpoPagina from "../ui/ScrittaCorpoPagina";
+// import ScrittaCorpoPagina from "../ui/ScrittaCorpoPagina";
 import Footer from "../ui/Footer";
 import VideoFotoIniziale from "../ui/VideoFotoIniziale";
 
@@ -41,19 +41,19 @@ const ContainerSlide = styled.div`
 function Home() {
   return (
     <>
-      <VideoFotoIniziale tipo="video" src="/barbiere.mp4" type="video/mp4" />
+      <VideoFotoIniziale tipo="video" src="/menuservizi.mp4" type="video/mp4" />
 
       <ContainerHome>
         <Presentazione type="iniziale" />
         <MenuPagina />
-        {/* <Presentazione type="inframmezzo" author="Eiselle">
+        <Presentazione type="inframmezzo" author="Eiselle">
           {" "}
           "Per trovare il tuo look, la sperimentazione è sempre cosa buona e
           giusta: capelli lunghi, corti, lisci, ricci, morbidi o naturali, alla
           Monna Lisa, punk, spettinati, acconciati ad arte, non importa. Quello
           che importa è che sia siano sani, perché coi capelli sani puoi fare
           ciò che vuoi."
-        </Presentazione> */}
+        </Presentazione>
       </ContainerHome>
 
       <ContainerSlide>

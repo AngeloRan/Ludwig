@@ -248,7 +248,7 @@ const ContainerTuttoMobile = styled.div`
 const FotoMobile = styled.img`
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 `;
 const ScrittaMobile = styled.p`
   & span {
@@ -358,7 +358,7 @@ function Storia() {
                 quartoStep={quartoStep}
               >
                 <FotoCapitoloPrimo type="seconda" terzoStep={terzoStep}>
-                  <IMG src="/img/2001.jpeg" alt="Foto 2024"></IMG>
+                  <IMG src="/img/logo2.JPG" alt="Foto 2024"></IMG>
                 </FotoCapitoloPrimo>
                 <P
                   type="secondoCapitolo"
@@ -396,7 +396,7 @@ function Storia() {
             </ContainerFotoMobile>
             <ContainerFotoMobile>
               <PictureMobile>
-                <FotoMobile src="/img/2001.jpeg" />
+                <FotoMobile src="/img/logo2.JPG" />
               </PictureMobile>
               <ScrittaMobile>
                 <span>2024</span> Dopo 23 anni, e con l’ingresso dei figli

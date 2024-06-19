@@ -116,6 +116,7 @@ function VideoFotoIniziale({ children, ...props }) {
     <ContainerVideo>
       {props.tipo === "video" && (
         <Video
+          preload="auto"
           loaded={isLoaded}
           ref={videoFotoRef}
           autoPlay
