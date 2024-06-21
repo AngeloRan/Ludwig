@@ -7,6 +7,7 @@ const StyledOverlay = styled.div`
   height: 100vh;
   width: 100vw;
   background-color: rgba(0, 0, 0, 0.9);
+  backdrop-filter: blur(1px);
   z-index: 9999;
   transition: opacity 0.9s ease;
   opacity: 0;

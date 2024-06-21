@@ -192,7 +192,7 @@ function Menuservizi() {
       },
       {
         titolo: "Intense ritual",
-        prezzo: "26",
+        prezzo: "32",
         descrizione:
           "I nostri Intense ritual offrono una soluzione a qualsiasi necessità. Hanno un’efficacia maggiore e più duratura nel tempo. Sono tutti enfatizzati da una nuovissima tecnologia di nebulizzazione che ti spiegheranno i nostri esperti in salone.",
       },

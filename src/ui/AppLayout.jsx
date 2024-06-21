@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Header from "./Header";
 import BtnPrenotazione from "../features/MenuHeader/BtnPrenotazione";
 import ArrowTopPage from "../features/MenuHeader/ArrowTopPage";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const StyledAppLayout = styled.div`
   display: flex;
@@ -38,6 +38,7 @@ const BtnPrenota = styled.div`
 
 function AppLayout() {
   const { pathname } = useLocation();
+  const [open, setOpen] = useState(false);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -49,11 +50,11 @@ function AppLayout() {
 
   return (
     <StyledAppLayout>
-      <Header></Header>
+      <Header open={open} setOpen={setOpen}></Header>
       <Main>
         <Outlet />
       </Main>
-      <Link to="prenota">
+      <Link to="prenota" onClick={() => setOpen(false)}>
         <BtnPrenota>
           <BtnPrenotazione />
         </BtnPrenota>
