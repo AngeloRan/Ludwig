@@ -49,7 +49,7 @@ const fotos = [];
 // ];
 
 while (fotos.length < 3) {
-  let img = `./img/foto_${Math.floor(Math.random() * 11) + 1}.PNG`;
+  let img = `./img/foto_${Math.floor(Math.random() * 10) + 1}.PNG`;
   !fotos.includes(img) && fotos.push(img);
 }
 

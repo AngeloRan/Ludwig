@@ -100,7 +100,7 @@ const FotoImg = styled.img`
 export const GalleriaContext = createContext({});
 
 const fotogalleria = Array.from(
-  { length: 11 },
+  { length: 10 },
   (foto, i) => `./img/foto_${i + 1}.PNG`
 );
 
