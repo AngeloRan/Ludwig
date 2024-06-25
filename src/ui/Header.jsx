@@ -253,9 +253,8 @@ const IconaMenu = styled.div`
   }}
 `;
 
-function Header() {
+function Header({ open, setOpen }) {
   const [show, setShow] = useState(true);
-  const [open, setOpen] = useState(false);
 
   useEffect(() => {
     let isScrolling;
