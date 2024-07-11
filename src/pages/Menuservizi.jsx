@@ -105,7 +105,7 @@ function Menuservizi() {
     colorCouture: [
       {
         titolo: "All over color",
-        prezzo: "da 40",
+        prezzo: "da 45",
         descrizione:
           "Un colore personalizzato in base alla consulenza del tuo tecnico, eseguito solitamente per coprire i capelli bianchi ogni  3/4 settimane.",
       },

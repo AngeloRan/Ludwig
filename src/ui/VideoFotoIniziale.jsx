@@ -93,7 +93,7 @@ function VideoFotoIniziale({ children, ...props }) {
     const videoFotoElement = videoFotoRef?.current;
 
     if (!videoFotoElement) return;
-
+    videoFotoElement.muted = true;
     if (videoFotoElement.hasAttribute("loop")) {
       videoFotoElement.addEventListener("loadeddata", (e) => {
         videoFotoElement.muted = true; // Assicurati che il video sia silenziato
