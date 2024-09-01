@@ -128,7 +128,7 @@ function Footer({ page, type }) {
       <RowFooter>
         <H5>Contatti</H5>
         <p>
-          <a href="tel:+3901190155465">
+          <a href="tel:+390119015465">
             Telefono: <span>+ 39 011 90 15 465</span>
           </a>
         </p>

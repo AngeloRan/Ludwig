@@ -103,7 +103,7 @@ function Contatti() {
       <DivPrenotazioni>
         <H2 type="prenotazioni">Prenotazioni</H2>
         <DivPrenotazioniModalita>
-          <a href="tel:+3901190155465">
+          <a href="tel:+390119015465">
             <ContenitoreAllineamentoIcone>
               <span>Telefono:</span>
               <span>+ 39 011 90 15 465</span>
