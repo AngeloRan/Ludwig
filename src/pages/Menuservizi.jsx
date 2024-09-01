@@ -73,7 +73,7 @@ function Menuservizi() {
     styling: [
       {
         titolo: "Taglio sartoriale e piega",
-        prezzo: "47",
+        prezzo: "da 47",
         descrizione:
           "Presso il nostro salone, offriamo un servizio di taglio sartoriale. È un'esperienza personalizzata che prende in considerazione la morfologia del viso, la texture dei capelli e le abitudini quotidiane di ogni cliente. I nostri esperti collaborano attentamente con te per comprendere le tue esigenze e offrirti consigli mirati in base alla consulenza. Il risultato finale è un taglio che mette in risalto la tua bellezza naturale e che riflette la tua individualità.",
       },
@@ -111,19 +111,19 @@ function Menuservizi() {
       },
       {
         titolo: "Glaze",
-        prezzo: "da 20",
+        prezzo: "da 30",
         descrizione:
           "Enfatizza o modifica la tonalità dei tuoi capelli. Viene sempre eseguito dopo le schiariture per dare una tonalità unica. È un ottimo mantenimento fra una sessione di colore e l’altra.",
       },
       {
         titolo: "Golden Aura",
-        prezzo: "da 85",
+        prezzo: "da 100",
         descrizione:
           "E' un servizio di schiariture che parte dalle radici, perfetto per chi vuole vedersi molto chiara su tutti i capelli, anche sulla base, dando tridimensionalità al suo colore naturale.",
       },
       {
         titolo: "Partial Golden Aura",
-        prezzo: "da 65 ",
+        prezzo: "da 80 ",
         descrizione:
           "Cosa cambia da quello precedente? La quantità di schiaritura è concentrata sulla sommità, ideale come mantenimento dopo 8/10 settimane aver fatto il servizio Golden Aura.",
       },
@@ -135,19 +135,19 @@ function Menuservizi() {
       },
       {
         titolo: "Full blending",
-        prezzo: "da 85",
+        prezzo: "da 100",
         descrizione:
           "Il Full Blending dipinge delicatamente i tuoi capelli con un effetto di schiaritura naturale e graduale. Con questa tecnica il capello viene schiarito creando un effetto luminoso e multidimensionale, con sfumature che si fondono armoniosamente con il tuo colore naturale dei capelli. È perfetto per aggiungere movimento e luminosità alla tua chioma. Per un look a prova di Pinterest!",
       },
       {
         titolo: "Soft  blending",
-        prezzo: "da 65",
+        prezzo: "da 80",
         descrizione:
           "Cosa cambia dal full? La quantità di capelli schiarita è minore, per dare movimento alle lunghezze, ma con un effetto ancora più naturale come se fossero schiariti dal sole. Mantenimento medio-basso.",
       },
       {
         titolo: "SHADOWING",
-        prezzo: "da 75",
+        prezzo: "da 90",
         descrizione:
           "Lo Shadowing da ai tuoi capelli un makeover in 3D! Utilizziamo diverse tonalità di colore per creare ombre e luci che accentuano le caratteristiche del tuo viso e dei tuoi capelli, aggiungendo profondità e dimensione. È come scolpire i tuoi capelli per valorizzare al meglio la tua bellezza naturale.",
       },
@@ -186,7 +186,7 @@ function Menuservizi() {
     ludwigRituals: [
       {
         titolo: "Essential ritual",
-        prezzo: "14",
+        prezzo: "15",
         descrizione:
           "I nostri Essential ritual sono una serie di trattamenti per qualsiasi esigenza del capello, grazie alla tecnologia nanomolecolare otterrai una bellezza impeccabile, in tempi record, senza compromessi.",
       },
